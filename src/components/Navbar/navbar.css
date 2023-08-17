@@ -1,0 +1,89 @@
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+
+.wrapper .navbar{
+    width: 300px;
+    height: 100%;
+    background: #7ab887;
+    padding: 30px 0px;
+    position: fixed;
+}
+
+.navbar {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+.wrapper .navbar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .navbar .desktopMenu .desktopMenuListItem{
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+
+}
+
+.wrapper .navbar .desktopMenu .desktopMenuListItem a{
+    color: #bdb8d7;
+    display: block;
+    width: 50px;
+}
+
+.wrapper .navbar .desktopMenu .desktopMenuListItem:hover{
+    background-color: #177b23;
+}
+
+.wrapper .navbar .desktopMenu .desktopMenuListItem:hover a{
+    color: #fff;
+}
+
+.wrapper .navbar .social_media{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.wrapper .navbar .social_media a{
+    display: block;
+    width: 40px;
+    background: #177b23;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 5px;
+    color: #bdb8d7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.desktopListImg {
+    width: 25px;
+    height: 25px;
+}
+
+.mypic {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    left: 15%;
+    /*border: 3px solid indianred;*/
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /*background: #877ab8;*/
+    /*background: #cccccc;*/
+    background: #b8877a;
+}
