@@ -19,22 +19,19 @@ const Navbar = () => {
         <div className="wrapper">
             <nav className="navbar">
                 <img src={meImageNoBg} alt="logo" className="mypic"/>
-                <ul className="desktopMenu">
+                <h1>Filippo Concato</h1>
+                <h3>Lorem Ipsum</h3>
+                <div className="desktopMenu">
                     {menuItems.map((menuItem, index) =>(
-                        <li key={index} className="desktopMenuListItem">
+                        <div key={index} className="desktopMenuListItem">
                             <Link>
                                 <div className="menuLinkWrapper">
                                     {menuItem.icon}
                                     <span>{menuItem.text}</span>
                                 </div>
                             </Link>
-                        </li>
+                        </div>
                     ))}
-                </ul>
-                <div className="social_media">
-                    <a href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a href="#"><i className="fab fa-twitter"></i></a>
-                    <a href="#"><i className="fab fa-instagram"></i></a>
                 </div>
             </nav>
         </div>

@@ -1,5 +1,6 @@
 .wrapper{
     display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -10,13 +11,15 @@
     background: #7ab887;
     padding: 30px 0px;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar {
     position: sticky;
     left: 0;
     z-index: 3;
-    justify-content: space-between;
 }
 
 .wrapper .navbar h2{
@@ -26,8 +29,12 @@
     margin-bottom: 30px;
 }
 
+.wrapper .navbar .desktopMenu {
+    width: 100%;
+}
+
 .wrapper .navbar .desktopMenu .desktopMenuListItem{
-    padding: 15px;
+    padding: 15px 30px;
     border-bottom: 1px solid #bdb8d7;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -49,10 +56,6 @@
 }
 
 .wrapper .navbar .social_media{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
 }
 
@@ -75,11 +78,7 @@
 }
 
 .mypic {
-    width: 200px;
     height: 200px;
-    margin: auto;
-    position: relative;
-    left: 15%;
     /*border: 3px solid indianred;*/
     border-radius: 50%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -87,3 +86,9 @@
     /*background: #cccccc;*/
     background: #b8877a;
 }
+
+h1, h3 {
+    padding: 15px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
