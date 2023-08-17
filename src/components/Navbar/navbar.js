@@ -1,10 +1,10 @@
 import React from "react";
 import './navbar.css';
 import {Link} from 'react-scroll';
-import {ReactComponent as AboutImg } from "./assets/user-regular.svg";
+import {ReactComponent as AboutImg } from "./assets/user-solid.svg";
 import {ReactComponent as ProjectImg } from "./assets/diagram-project-solid.svg";
 import {ReactComponent as MoreImg } from "./assets/icons-solid.svg";
-import {ReactComponent as ContactImg } from "./assets/address-book-regular.svg";
+import {ReactComponent as ContactImg } from "./assets/address-book-solid.svg";
 import meImageNoBg from "./assets/me-nobg.png"
 
 let menuItems = [
@@ -23,7 +23,7 @@ const Navbar = () => {
                 <h3>Lorem Ipsum</h3>
                 <div className="desktopMenu">
                     {menuItems.map((menuItem, index) =>(
-                        <div key={index} className="desktopMenuListItem">
+                        <div key={index} className="desktopMenuListItem bordersRules">
                             <Link>
                                 <div className="menuLinkWrapper">
                                     {menuItem.icon}

@@ -8,7 +8,7 @@
 .wrapper .navbar{
     width: 300px;
     height: 100%;
-    background: #7ab887;
+    background: #27ae60;
     padding: 30px 0px;
     position: fixed;
     display: flex;
@@ -35,25 +35,22 @@
 
 .wrapper .navbar .desktopMenu .desktopMenuListItem{
     padding: 15px 30px;
-    border-bottom: 1px solid #bdb8d7;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    border-top: 1px solid rgba(255,255,255,0.05);
     margin: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .wrapper .navbar .desktopMenu .desktopMenuListItem a{
-    color: #bdb8d7;
+    color: #fff;
     display: block;
     width: 50px;
 }
 
 .wrapper .navbar .desktopMenu .desktopMenuListItem:hover{
-    background-color: #177b23;
+    background-color: #7ab887;
 }
 
 .wrapper .navbar .desktopMenu .desktopMenuListItem:hover a{
-    color: #fff;
+    color: ivory;
 }
 
 .wrapper .navbar .social_media{
@@ -89,11 +86,19 @@
     background: #b8877a;
 }
 
+/*Single Elements*/
+
 h1 {
-    padding: 15px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+                       padding: 15px;
+                       text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                   }
 
 h3 {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bordersRules {
+    border-radius: 8px;
+    border: 0;
+    box-shadow: rgba(255, 235, 205, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;
 }
