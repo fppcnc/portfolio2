@@ -55,22 +55,22 @@
 /*    color: ivory;*/
 /*}*/
 
-.containerNavbar .navbar .social_media{
-    display: flex;
-}
+/*.containerNavbar .navbar .social_media{*/
+/*    display: flex;*/
+/*}*/
 
-.containerNavbar .navbar .social_media a{
-    display: block;
-    width: 40px;
-    background: #177b23;
-    height: 40px;
-    line-height: 45px;
-    text-align: center;
-    margin: 0 5px;
-    color: #bdb8d7;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+/*.containerNavbar .navbar .social_media a{*/
+/*    display: block;*/
+/*    width: 40px;*/
+/*    background: #177b23;*/
+/*    height: 40px;*/
+/*    line-height: 45px;*/
+/*    text-align: center;*/
+/*    margin: 0 5px;*/
+/*    color: #bdb8d7;*/
+/*    border-top-left-radius: 5px;*/
+/*    border-top-right-radius: 5px;*/
+/*}*/
 
 /*.desktopListImg {*/
 /*    width: 25px;*/
