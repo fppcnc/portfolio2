@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './navbar.css';
+import './test.css';
 import {Link} from 'react-scroll';
 import {ReactComponent as AboutImg } from "./assets/user-solid.svg";
 import {ReactComponent as ProjectImg } from "./assets/diagram-project-solid.svg";
