@@ -1,0 +1,44 @@
+.containerCards {
+    width: 100%;
+    max-width: 85%;
+    margin-left: 15%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1f;
+    /*color: white;*/
+    min-height: 100vh;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+}
+
+.card {
+    width: 60%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: rgba(255, 235, 205, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;
+}
+
+
+.card.even {
+    justify-self: left;
+    background-color: #7ab887;
+}
+
+
+.card.odd {
+    background-color: #7ab887;
+    justify-self: right;
+}
+
+.bordersRules {
+
+}

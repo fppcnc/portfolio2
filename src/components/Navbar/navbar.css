@@ -1,20 +1,15 @@
-.wrapper{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-
-.wrapper .navbar{
-    width: 300px;
+.containerNavbar, .containerNavbar .navbar{
+    width: 15%;
+    max-width: 300px;
     height: 100%;
     background: #27ae60;
-    padding: 30px 0px;
+    padding: 30px 0;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .navbar {
     position: sticky;
@@ -22,42 +17,36 @@
     z-index: 3;
 }
 
-.wrapper .navbar h2{
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
 
-.wrapper .navbar .desktopMenu {
+.containerNavbar .navbar .desktopMenu {
     width: 100%;
 }
 
-.wrapper .navbar .desktopMenu .desktopMenuListItem{
+.containerNavbar .navbar .desktopMenu .desktopMenuListItem{
     padding: 15px 30px;
     margin: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper .navbar .desktopMenu .desktopMenuListItem a{
+.containerNavbar .navbar .desktopMenu .desktopMenuListItem a{
     color: #fff;
     display: block;
     width: 50px;
 }
 
-.wrapper .navbar .desktopMenu .desktopMenuListItem:hover{
+.containerNavbar .navbar .desktopMenu .desktopMenuListItem:hover{
     background-color: #7ab887;
 }
 
-.wrapper .navbar .desktopMenu .desktopMenuListItem:hover a{
+.containerNavbar .navbar .desktopMenu .desktopMenuListItem:hover a{
     color: ivory;
 }
 
-.wrapper .navbar .social_media{
+.containerNavbar .navbar .social_media{
     display: flex;
 }
 
-.wrapper .navbar .social_media a{
+.containerNavbar .navbar .social_media a{
     display: block;
     width: 40px;
     background: #177b23;

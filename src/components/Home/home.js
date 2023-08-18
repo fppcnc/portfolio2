@@ -1,10 +1,11 @@
 import React from "react";
-import '.home.css';
+import './home.css';
 
 const Home = () => {
     return (
-        <section id="home"></section>
-        
+        <section id="home">
+
+        </section>
     )
 }
 

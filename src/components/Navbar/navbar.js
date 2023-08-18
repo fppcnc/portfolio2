@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './navbar.css';
 import {Link} from 'react-scroll';
 import {ReactComponent as AboutImg } from "./assets/user-solid.svg";
@@ -7,16 +7,18 @@ import {ReactComponent as MoreImg } from "./assets/icons-solid.svg";
 import {ReactComponent as ContactImg } from "./assets/address-book-solid.svg";
 import meImageNoBg from "./assets/me-nobg.png"
 
-let menuItems = [
-    { text: "About", icon: <AboutImg className="desktopListImg" /> },
-    { text: "Projects", icon: <ProjectImg className="desktopListImg" /> },
-    { text: "More", icon: <MoreImg className="desktopListImg" /> },
-    { text: "Contact", icon: <ContactImg className="desktopListImg" /> },
-];
+
 
 const Navbar = () => {
+    const[menuItems] = useState([
+        { text: "About", icon: <AboutImg className="desktopListImg" /> },
+        { text: "Projects", icon: <ProjectImg className="desktopListImg" /> },
+        { text: "More", icon: <MoreImg className="desktopListImg" /> },
+        { text: "Contact", icon: <ContactImg className="desktopListImg" /> },
+    ]);
+
     return (
-        <div className="wrapper">
+        <div className="containerNavbar">
             <nav className="navbar">
                 <img src={meImageNoBg} alt="logo" className="mypic"/>
                 <h1>Filippo Concato</h1>

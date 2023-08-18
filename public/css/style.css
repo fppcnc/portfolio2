@@ -7,8 +7,19 @@
 }
 
 body {
-    background: white;
+    background: black;
     color: white;
     overflow: hidden;
     overflow-y: auto;
 }
+
+.root {
+    display: flex;
+    width: 100%;
+}
+
+/*html, body, #app, #app>div {*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*}*/
