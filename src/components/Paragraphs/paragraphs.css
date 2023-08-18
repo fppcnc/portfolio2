@@ -1,23 +1,27 @@
-.containerCards {
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.containerParagraphs {
     width: 100%;
     max-width: 85%;
     margin-left: 15%;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /*color: white;*/
     min-height: 100vh;
 }
 
-.cards {
+.paragraphs {
     width: 100%;
     display: grid;
     flex-wrap: wrap;
+    align-content: space-between;
 }
 
-.card {
+.paragraph {
     width: 60%;
     margin-bottom: 20px;
     padding: 20px;
@@ -28,13 +32,13 @@
 }
 
 
-.card.even {
+.paragraph.even {
     justify-self: left;
     background-color: #7ab887;
 }
 
 
-.card.odd {
+.paragraph.odd {
     background-color: #7ab887;
     justify-self: right;
 }

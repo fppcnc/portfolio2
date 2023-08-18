@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/navbar";
 import Home from "./components/Home/home";
-import Cards from "./components/Cards/cards";
+import Cards from "./components/Paragraphs/paragraphs";
 
 function App() {
   return (
