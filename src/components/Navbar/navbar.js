@@ -28,8 +28,8 @@ const Navbar = () => {
                         <div key={index} className="desktopMenuListItem bordersRules">
                             <Link>
                                 <div className="menuLinkWrapper">
-                                    {menuItem.icon}
-                                    <span>{menuItem.text}</span>
+                                    <span className="desktopMenuenuListItemIcon">{menuItem.icon}</span>
+                                    <span className="desktopMenuenuListItemText">{menuItem.text}</span>
                                 </div>
                             </Link>
                         </div>

@@ -7,7 +7,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #1f1f1f;
     /*color: white;*/
     min-height: 100vh;
 }
@@ -15,6 +14,7 @@
 .cards {
     width: 100%;
     display: grid;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -37,8 +37,4 @@
 .card.odd {
     background-color: #7ab887;
     justify-self: right;
-}
-
-.bordersRules {
-
 }

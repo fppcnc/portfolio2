@@ -17,13 +17,11 @@ const Cards = (props) => {
                     <div className="cards">
                         {cards.map((card, index) => (
                             <div key={index} className={`card ${index % 2 === 0 ? 'even' : 'odd'}`}>
-                                <h3>{card.title}</h3>
+                                <h2>{card.title}</h2>
                                 <p>{card.content}</p>
                             </div>
                         ))}
-
                     </div>
-
         </div>
     )
 }

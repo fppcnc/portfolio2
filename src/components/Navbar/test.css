@@ -66,13 +66,16 @@
 
 .containerNavbar .navbar h3 {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     transition-duration: 1s;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.5rem;
+    padding-bottom: 20px;
 }
 
         .containerNavbar:hover .navbar h3 {
             opacity: 1;
+            font-size: 1.17rem;
         }
 
 .containerNavbar .navbar .desktopMenu {
@@ -82,13 +85,45 @@
 
 .containerNavbar .navbar .desktopMenu .desktopMenuListItem{
     padding: 15px 30px;
-    margin: 20px;
+    margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 80%;
 }
 
+        .containerNavbar .navbar .desktopMenu .desktopMenuListItem:hover{
+            background-color: #7ab887;
+        }
+
+.containerNavbar .navbar .desktopMenu .desktopMenuListItem a{
+    color: #fff;
+    display: block;
+    width: 50px;
+}
+
+        .containerNavbar .navbar .desktopMenu .desktopMenuListItem:hover a{
+            color: ivory;
+        }
 
 
+.containerNavbar .desktopMenuListItem .menuLinkWrapper {
+    display: flex;
+}
+
+.containerNavbar .desktopMenuListItem .menuLinkWrapper .desktopMenuenuListItemText {
+    margin-left: 10px;
+    align-self: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-duration: 1s;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0;
+}
+
+    .containerNavbar:hover .desktopMenuListItem .menuLinkWrapper .desktopMenuenuListItemText {
+        margin-left: 50px;
+        opacity: 1;
+        font-size: 1.17rem;
+    }
 
 
 
