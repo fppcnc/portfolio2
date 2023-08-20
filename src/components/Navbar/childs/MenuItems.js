@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import {sectionsData} from "../../data/sections";
+import {sectionsData} from "../../../data/sectionsData";
 
 const MenuItems = () => {
     return (

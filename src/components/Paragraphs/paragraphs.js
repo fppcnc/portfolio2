@@ -1,6 +1,6 @@
 import React from "react";
 import './paragraphs.css';
-import {sectionsData} from "../../data/sections";
+import {sectionsData} from "../../data/sectionsData";
 
 
 const Paragraphs = (props) => {

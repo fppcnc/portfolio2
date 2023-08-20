@@ -1,8 +1,8 @@
 import React from "react";
 import './navbar.css';
-import MenuItems from "../../UI/menuItems/MenuItems";
-import Socials from "../../UI/socials/Socials";
-import Me from "../../UI/me/Me";
+import MenuItems from "./childs/MenuItems";
+import Socials from "./childs/Socials";
+import Me from "./childs/Me";
 
 const Navbar = () => {
 

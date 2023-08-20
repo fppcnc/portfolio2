@@ -1,6 +1,6 @@
 import React from "react";
 import {ExternalLink} from "react-external-link";
-import {socialsData} from "./socialsData";
+import {socialsData} from "../../../data/socialsData";
 
 const Socials = () => {
     return (
