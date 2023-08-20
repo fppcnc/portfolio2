@@ -1,23 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 import './paragraphs.css';
+import {sectionsData} from "../../data/sections";
 
 
 const Paragraphs = (props) => {
-    const [paragraphs] = useState([
-        {title: "About", content: 'About Me'},
-        {title: "Projects", content: 'Projects'},
-        {title: "More", content: 'More'},
-        {title: "Contact", content: 'Contacts'},
-    ])
 
 
     return (
         <div className="containerParagraphs">
                     <div className="paragraphs">
-                        {paragraphs.map((paragraph, index) => (
-                            <div key={index} className={`paragraph ${index % 2 === 0 ? 'even' : 'odd'}`}>
-                                <h2>{paragraph.title}</h2>
-                                <p>{paragraph.content}</p>
+                        {sectionsData.map((sectionData, index) => (
+                            <div key={index} id={sectionData.title.toLowerCase()} className={`paragraph ${index % 2 === 0 ? 'even' : 'odd'}`}>
+                                <h2>{sectionData.title}</h2>
+                                <p>{sectionData.content}</p>
                             </div>
                         ))}
                     </div>

@@ -1,16 +1,16 @@
 import React from "react";
 import {ExternalLink} from "react-external-link";
-import { socialsData } from "./socialsData";
+import {socialsData} from "./socialsData";
 
 const Socials = () => {
     return (
         <div className="social_media">
             {socialsData.map((social, index) => (
-
-                    <div key={index}>
+                <ExternalLink href={social.link} key={index}>
+                    <div>
                         {social.icon}
                     </div>
-
+                </ExternalLink>
             ))}
         </div>
     )

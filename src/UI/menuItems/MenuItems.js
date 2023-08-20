@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { menuItemsData } from "./menuItemsData";
+import {sectionsData} from "../../data/sections";
 
 const MenuItems = () => {
     return (
         <div className="desktopMenu">
-            {menuItemsData.map((menuItem, index) => (
-                <Link key={index} className="desktopMenuListItem bordersRules">
+            {sectionsData.map((sectionData, index) => (
+                <Link key={index} to={sectionData.title.toLowerCase()} className="desktopMenuListItem bordersRules">
                     <div className="menuLinkWrapper">
-                        <span className="desktopMenuListItemIcon">{menuItem.icon}</span>
-                        <span className="desktopMenuListItemText">{menuItem.text}</span>
+                        <span className="desktopListImg">{sectionData.icon}</span>
+                        <span className="desktopMenuListItemText">{sectionData.title}</span>
                     </div>
                 </Link>
             ))}
