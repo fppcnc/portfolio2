@@ -1,0 +1,141 @@
+/*.containerNavbar {*/
+/*    width: 33.33%;*/
+/*    transition: width 0.3s ease;*/
+/*    max-width: 300px;*/
+/*    height: 100%;*/
+/*    background: #27ae60;*/
+/*    padding: 30px 0;*/
+/*    position: fixed;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.containerNavbar .navbar{*/
+/*    width: 15%;*/
+/*    max-width: 300px;*/
+/*    height: 100%;*/
+/*    background: #27ae60;*/
+/*    padding: 30px 0;*/
+/*    position: fixed;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
+
+
+/*.navbar {*/
+/*    position: sticky;*/
+/*    left: 0;*/
+/*    z-index: 3;*/
+/*}*/
+
+
+/*.containerNavbar .navbar .desktopMenu {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.containerNavbar .navbar .desktopMenu .desktopMenuListItem{*/
+/*    padding: 15px 30px;*/
+/*    margin: 5px;*/
+/*    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*.containerNavbar .navbar .desktopMenu .desktopMenuListItem a{*/
+/*    color: #fff;*/
+/*    display: block;*/
+/*    width: 50px;*/
+/*}*/
+
+/*.containerNavbar .navbar .desktopMenu .desktopMenuListItem:hover{*/
+/*    background-color: #7ab887;*/
+/*}*/
+
+/*.containerNavbar .navbar .desktopMenu .desktopMenuListItem:hover a{*/
+/*    color: ivory;*/
+/*}*/
+
+/*.containerNavbar .navbar .social_media{*/
+/*    display: flex;*/
+/*}*/
+
+/*.containerNavbar .navbar .social_media a{*/
+/*    display: block;*/
+/*    width: 40px;*/
+/*    background: #177b23;*/
+/*    height: 40px;*/
+/*    line-height: 45px;*/
+/*    text-align: center;*/
+/*    margin: 0 5px;*/
+/*    color: #bdb8d7;*/
+/*    border-top-left-radius: 5px;*/
+/*    border-top-right-radius: 5px;*/
+/*}*/
+
+/*.desktopListImg {*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*}*/
+
+/*.mypic {*/
+/*    height: 200px;*/
+/*    object-fit: cover;*/
+/*    !*border: 3px solid indianred;*!*/
+/*    border-radius: 50%;*/
+/*    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+/*    !*background: #877ab8;*!*/
+/*    !*background: #cccccc;*!*/
+/*    background: #b8877a;*/
+/*}*/
+
+/*Single Elements*/
+
+/*h1 {*/
+/*                       padding: 15px;*/
+/*                       text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+/*                   }*/
+
+/*h3 {*/
+/*    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*.bordersRules {*/
+/*    border-radius: 8px;*/
+/*    border: 0;*/
+/*    box-shadow: rgba(255, 235, 205, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;*/
+/*}*/
+
+
+/*.containerNavbar:hover {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.containerNavbar .navbar {*/
+/*    transition: width 0.3s ease; !* Smooth width transition *!*/
+/*}*/
+
+/*.containerNavbar .mypic {*/
+/*    height: 100px; !* Start with small mypic size *!*/
+/*    transition: height 0.3s ease; !* Smooth height transition *!*/
+/*}*/
+
+/*.containerNavbar:hover .mypic {*/
+/*    height: 200px; !* Resize mypic on hover *!*/
+/*}*/
+
+/*.containerNavbar h1 {*/
+/*    font-size: 1.5rem; !* Start with small font size *!*/
+/*    transition: font-size 0.3s ease; !* Smooth font size transition *!*/
+/*}*/
+
+/*.containerNavbar:hover h1 {*/
+/*    font-size: 2rem; !* Reduce font size on hover *!*/
+/*}*/
+
+/*.containerNavbar .desktopMenuListItem span {*/
+/*    display: inline; !* Hide menuItem.text by default *!*/
+/*}*/
+
+/*.containerNavbar:hover .desktopMenuListItem span {*/
+/*    display: none; !* Display menuItem.text on hover *!*/
+/*}*/

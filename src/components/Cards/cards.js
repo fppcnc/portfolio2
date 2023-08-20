@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import './cards.css';
 
-
 const Cards = (props) => {
     const [cards] = useState([
         {title: "About", content: 'About Me'},
