@@ -7,8 +7,8 @@
 }
 
 body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    background: #1f1f1f;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    background: #fff;
     color: white;
     overflow: hidden;
     overflow-y: auto;

@@ -196,24 +196,3 @@
     /*background: #cccccc;*/
     background: #b8877a;
 }
-
-.locked {
-    width: 300px;
-}
-
-/* Style for the lock button */
-.lockButton {
-    margin-top: auto; /* Push the button to the bottom */
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 14px;
-    padding: 10px;
-    transition: color 0.3s, font-size 0.3s;
-}
-
-.lockButton:hover {
-    color: ivory;
-    font-size: 16px;
-}

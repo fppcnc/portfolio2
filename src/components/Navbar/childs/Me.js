@@ -6,7 +6,7 @@ const Me = () => {
 <>
         <img src={meImageNoBg} alt="logo" className="mypic"/>
     <h1>Filippo Concato</h1>
-    <h3>Lorem Ipsum</h3>
+    <h3>Web Developer</h3>
 </>
 )
 }

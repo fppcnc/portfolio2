@@ -34,11 +34,13 @@ section {
 
 .paragraph.even {
     justify-self: left;
+    /*color: black;*/
     background-color: #7ab887;
 }
 
 
 .paragraph.odd {
+    /*color: black;*/
     background-color: #7ab887;
     justify-self: right;
 }
