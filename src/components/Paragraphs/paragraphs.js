@@ -3,7 +3,7 @@ import './paragraphs.css';
 import {sectionsData} from "../../data/sectionsData";
 
 
-const Paragraphs = (props) => {
+const Paragraphs = () => {
 
 
     return (

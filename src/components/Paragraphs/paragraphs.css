@@ -10,7 +10,7 @@ section {
     width: 100%;
     max-width: 85%;
     margin-left: 15%;
-    padding: 30px;
+    padding: 80px;
     min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@ section {
     background-color: #fff;
     border-radius: 8px;
     border: 0;
-    box-shadow: rgba(255, 235, 205, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
@@ -44,3 +44,6 @@ section {
     background-color: #7ab887;
     justify-self: right;
 }
+
+/*ToDo: each paragraph as bis as the display page. if possible, stop scrolling for a second when paragraph is reached,
+   scroll faster between paragraphs*/

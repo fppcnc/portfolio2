@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.2);*/
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
         .containerNavbar:hover {
@@ -87,10 +89,12 @@
             transform: translateY(-2px) translateX(-2px);
         }
 
-            .containerNavbar .navbar .desktopMenu .desktopMenuListItem .active {
+            .containerNavbar .navbar .desktopMenu .desktopMenuListItem.active {
                 background-color: #7ab887;
                 transform: translateY(-2px) translateX(-2px);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
             }
+
 
 .containerNavbar .navbar .desktopMenu .desktopMenuListItem a {
     color: #fff;
@@ -196,3 +200,4 @@
     /*background: #cccccc;*/
     background: #b8877a;
 }
+
