@@ -11,14 +11,16 @@ const Paragraphs = () => {
         <div className="containerParagraphs">
             <div className="paragraphs" ref={ref}>
                 {sectionsData.map((sectionData, index) => (
+                    <div className="containerParagraph">
                     <div
                         key={index}
                         id={sectionData.title.toLowerCase()}
                         className={`paragraph ${index % 2 === 0 ? 'even' : 'odd'}`}
                     >
                         <h2>{sectionData.title}</h2>
-                        <p>{sectionData.content}</p>
+                        <div>{sectionData.content}</div>
                     </div>
+        </div>
                 ))}
             </div>
         </div>
