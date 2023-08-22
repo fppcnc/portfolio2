@@ -12,6 +12,7 @@
     align-items: center;
     /*box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.2);*/
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    flex-flow: column wrap;
 }
 
         .containerNavbar:hover {

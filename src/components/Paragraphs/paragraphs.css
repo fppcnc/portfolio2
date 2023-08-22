@@ -1,17 +1,19 @@
-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*section {*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
 
 
 .containerParagraphs {
     width: 100%;
     max-width: 85%;
     margin-left: 15%;
-    padding: 80px;
-    min-height: 100vh;
+    padding: 0 80px 80px 80px;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 .paragraphs {
@@ -22,7 +24,14 @@ section {
 }
 
 .paragraph {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
     width: 60%;
+    min-height: 100vh;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
@@ -32,18 +41,18 @@ section {
 }
 
 
-.paragraph.even {
-    justify-self: left;
-    /*color: black;*/
-    background-color: #7ab887;
-}
+            .paragraph.even {
+                justify-self: left;
+                /*color: black;*/
+                background-color: #7ab887;
+            }
 
 
-.paragraph.odd {
-    /*color: black;*/
-    background-color: #7ab887;
-    justify-self: right;
-}
+            .paragraph.odd {
+                /*color: black;*/
+                background-color: #7ab887;
+                justify-self: right;
+            }
 
 /*ToDo: each paragraph as bis as the display page. if possible, stop scrolling for a second when paragraph is reached,
    scroll faster between paragraphs*/

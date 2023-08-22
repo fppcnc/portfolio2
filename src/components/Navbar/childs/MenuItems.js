@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { Link } from "react-scroll";
 import {sectionsData} from "../../../data/sectionsData";
 
 const MenuItems = () => {
@@ -7,13 +6,23 @@ const MenuItems = () => {
     const [activeMenuItem, setActiveMenuItem] = useState(0);
     const handleItemClick = (index) => {
         setActiveMenuItem(index);
+        scrollToSection(index);
     };
+
+    const scrollToSection = (index) => {
+        const sectionElement = document.getElementById(
+            sectionsData[index].title.toLowerCase()
+        );
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <div className="desktopMenu">
             {sectionsData.map((sectionData, index) => (
-                <Link
+                <div
                     key={index}
-                    to={sectionData.title.toLowerCase()}
                     className={`desktopMenuListItem bordersRules ${activeMenuItem === index ? 'active' : ''}`}
                     onClick={() => handleItemClick(index)}
                 >
@@ -21,7 +30,7 @@ const MenuItems = () => {
                         <span>{sectionData.icon}</span>
                         <span className="desktopMenuListItemText">{sectionData.title}</span>
                     </div>
-                </Link>
+                </div>
             ))}
         </div>
     );
