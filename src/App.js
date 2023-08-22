@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import Paragraphs from "./components/Paragraphs/paragraphs";
+import Paragraphs from "./components/Paragraphs/Paragraphs";
 
 function App() {
   return (

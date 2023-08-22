@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useRef} from "react";
 import './paragraphs.css';
 import {sectionsData} from "../../data/sectionsData";
 
 
 const Paragraphs = () => {
 
+    const ref = useRef(null);
+
     return (
         <div className="containerParagraphs">
-            <div className="paragraphs">
+            <div className="paragraphs" ref={ref}>
                 {sectionsData.map((sectionData, index) => (
                     <div
                         key={index}
