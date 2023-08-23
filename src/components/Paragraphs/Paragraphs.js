@@ -14,7 +14,7 @@ const Paragraphs = () => {
                     <div className="containerParagraph">
                     <div
                         key={index}
-                        id={sectionData.title.toLowerCase()}
+                        id={'pa' + index}
                         className={`paragraph ${index % 2 === 0 ? 'even' : 'odd'}`}
                     >
                         <h2>{sectionData.title}</h2>
