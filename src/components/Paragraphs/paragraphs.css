@@ -3,8 +3,9 @@
     width: 100%;
     max-width: 85%;
     margin-left: 15%;
-    padding: 0 80px 0px 80px;
+    padding: 0 80px 0 80px;
     height: 100vh;
+    max-height: 85%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
@@ -21,6 +22,7 @@
     width: 100%;
     min-height: 100vh;
     scroll-snap-align: start;
+
 }
 
 .paragraph {
@@ -28,12 +30,12 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
     scroll-snap-align: center;
     width: 60%;
     min-height: 100vh;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 40px;
     background-color: #fff;
     border-radius: 8px;
     border: 0;
@@ -41,16 +43,32 @@
 }
 
 
-            .paragraph.even {
-                justify-self: left;
-                /*color: black;*/
-                background-color: #7ab887;
-            }
+.paragraph.even {
+    justify-self: left;
+    /*justify-content: right;*/
+    /*color: black;*/
+    background-color: #7ab887;
+}
 
 
-            .paragraph.odd {
-                /*color: black;*/
-                background-color: #7ab887;
-                justify-self: right;
-            }
+.paragraph.odd {
+    /*color: black;*/
+    background-color: #7ab887;
+    justify-self: right;
+    /*justify-content: left;*/
+}
 
+
+/*     Content of each paragraph       */
+.paragraph.odd p, .paragraph.even p {
+    text-align: justify;
+    padding: 5px 0;
+}
+
+.paragraph.even h1, .paragraph.odd h1 {
+    top: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    z-index: 1;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

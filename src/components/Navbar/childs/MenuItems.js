@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {sectionsData} from "../../../data/sectionsData";
 import {useEffect} from "react";
-
 const MenuItems = () => {
 
     const [activeMenuItem, setActiveMenuItem] = useState(0);
@@ -11,7 +10,7 @@ const MenuItems = () => {
     };
 
     const scrollToSection = (index) => {
-        const sectionId = 'pa' + sectionsData[index];
+        const sectionId = sectionsData[index].title.toLowerCase();
         const sectionElement = document.getElementById(sectionId);
         if (sectionElement) {
             sectionElement.scrollIntoView({ behavior: 'smooth' });
