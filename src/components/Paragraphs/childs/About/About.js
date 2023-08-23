@@ -8,27 +8,43 @@ const About = () => {
         let month_diff = Date.now() - dob.getTime();
         let age_dt = new Date(month_diff);
         let year = age_dt.getUTCFullYear();
-        let age = Math.abs(year - 1970);
+        let age = Math.abs(year - 1969);
         return age;
     }
+
+    const email = 'concatofilippo94@gmail.com';
+
+    const mailTo = () => {
+        return <a href={`mailto:${email}`}>{email}</a>;
+    };
+
+
+    const gridContent = [
+        {label: 'Age', content: getDate() + ' years old'},
+        {label: 'Location', content: 'Berlin, Germany'},
+        {label: 'Occupation', content: 'FIAE Student at BBQ Berlin'},
+        {label: 'Email', content: mailTo()},
+    ];
+
     return (
 
         <>
-            <div className="grid2x2">
-                <div><div>LALALALAL</div></div>
-                <div><div>LALALALAL</div></div>
-                <div><div>{getDate()}</div></div>
-                <div><div>{getDate()}</div></div>
+            <div className="grid">
+                {gridContent.map((gridElement, index) => (
+                <div key={index}>
+                    <div><div>{gridElement.label} : {gridElement.content}</div></div>
+                </div>
+            ))}
             </div>
             <div>
-                <p>Hello, I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
+                <p>Hello! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
                     crafting the perfect pizza, I've ventured into the world of web development to create digital
                     experiences that are just as satisfying.</p>
                 <p>I bring a unique blend of skills to the table. My journey began in Italy, where I discovered at a
                     young age my love for baking and crafting. From kneading dough in Italy to perfecting the art of
                     pizza-making in the vibrant food scene of Melbourne, Australia, my culinary skills evolved across
                     continents. My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of
-                    growth. I started my Umschulung FIAE, a transformative journey of transitioning from pizza ovens to
+                    growth. I started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens to
                     coding terminals. As I continue this educational path, my passion for learning remains as fresh as a
                     just-baked pizza.</p>
                 <p>In the realm of web development, I thrive on crafting intuitive and user-centric experiences. My
