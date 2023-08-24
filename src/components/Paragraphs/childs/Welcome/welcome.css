@@ -3,7 +3,9 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    /*justify-content: center;*/
+    justify-content: center;
+    text-align: center;
+    white-space: pre-line;
     /*scroll-snap-align: start;*/
     width: 100%;
     min-height: calc(100vh - 100px);
