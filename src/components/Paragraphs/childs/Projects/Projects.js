@@ -9,7 +9,7 @@ const Projects = () => {
             <p>In the realm of web development, I thrive on crafting intuitive and user-centric experiences. My skills span from creating responsive layouts to bringing intricate designs to life. With each project, I aim to blend the precision I developed in the course of the years with my coding prowess to serve up digital solutions that leave a lasting taste.</p>
             <p>In my free time, you'll find me immersed in coding challenges, exploring new frameworks, and staying connected with the vibrant developer community. I approach every project with enthusiasm, embracing each challenge as an opportunity to grow and refine my skills</p>
             <p>Beyond the screen, I find solace in the kitchen, experimenting with flavors, and perfecting my baking recipes—the timeless treasures that inspired my journey. Cooking and baking are my creative outlets and just as I blend diverse ingredients to create unforgettable dishes, I blend my skills to create exceptional digital experiences.</p>
-
+                
         </>
     )
 }

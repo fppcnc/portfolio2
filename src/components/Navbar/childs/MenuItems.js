@@ -27,7 +27,7 @@ const MenuItems = () => {
                     }
                 }
             });
-        }, { rootMargin: "-50% 0px -50% 0px" }); // Adjust rootMargin as needed
+        }, { rootMargin: "-50% 0px -50% 0px" });
 
         const paragraphElements = document.querySelectorAll(".paragraph");
         paragraphElements.forEach((element, index) => {
