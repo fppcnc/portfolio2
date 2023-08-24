@@ -1,5 +1,10 @@
 import React from "react";
 import './home.css';
+import {ReactComponent as OccupationImg} from "../../../../assets/user-tie-solid.svg";
+import {ReactComponent as AgeImg} from "../../../../assets/calendar-days-solid.svg";
+import {ReactComponent as LocationImg} from "../../../../assets/location-dot-solid.svg";
+import {ReactComponent as EmailImg} from "../../../../assets/envelope-solid.svg";
+
 const Home = () => {
 
     const getDate = () => {
@@ -7,8 +12,8 @@ const Home = () => {
         let month_diff = Date.now() - dob.getTime();
         let age_dt = new Date(month_diff);
         let year = age_dt.getUTCFullYear();
-        let age = Math.abs(year - 1969);
-        return age;
+        return Math.abs(year - 1969);
+
     }
 
     const email = 'concatofilippo94@gmail.com';
@@ -19,10 +24,10 @@ const Home = () => {
 
 
     const gridContent = [
-        {label: 'Age', content: getDate() + ' years old'},
-        {label: 'Location', content: 'Berlin, Germany'},
-        {label: 'Occupation', content: 'FIAE Student at BBQ Berlin'},
-        {label: 'Email', content: mailTo()},
+        {label: 'Age', content: getDate() + ' years old', img: <AgeImg className="gridImg"/>},
+        {label: 'Location', content: 'Berlin, Germany', img: <LocationImg className="gridImg"/>},
+        {label: 'Occupation', content: 'FIAE Student at BBQ Berlin', img: <OccupationImg className="gridImg"/>},
+        {label: 'Email', content: mailTo(), img: <EmailImg className="gridImg"/>},
     ];
 
     return (
@@ -30,8 +35,13 @@ const Home = () => {
         <>
             <div className="grid">
                 {gridContent.map((gridElement, index) => (
-                    <div key={index}>
-                        <div><div>{gridElement.label} : {gridElement.content}</div></div>
+                    <div key={index} className="gridElement">
+                        <div>
+                            {gridElement.img}
+                            <div>
+                                <div>{gridElement.label} : {gridElement.content}</div>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -43,7 +53,8 @@ const Home = () => {
                     young age my love for baking and crafting. From kneading dough in Italy to perfecting the art of
                     pizza-making in the vibrant food scene of Melbourne, Australia, my culinary skills evolved across
                     continents. My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of
-                    growth. I started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens to
+                    growth. I started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens
+                    to
                     coding terminals. As I continue this educational path, my passion for learning remains as fresh as a
                     just-baked pizza.</p>
                 <p>In the realm of web development, I thrive on crafting intuitive and user-centric experiences. My

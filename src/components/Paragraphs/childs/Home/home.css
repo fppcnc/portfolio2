@@ -13,12 +13,23 @@
     flex-basis: calc(50% - 40px);
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
+
+
+
+
 .grid > div > div {
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
     flex-direction: row;
     border-bottom: solid 1px;
+}
 
+.gridImg {
+    width: 15px;
+    height: 15px;
+position: absolute;
+    left: 5px;
 }

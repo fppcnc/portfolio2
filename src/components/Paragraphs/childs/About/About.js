@@ -23,7 +23,7 @@ const About = () => {
         {label: 'Age', content: getDate() + ' years old'},
         {label: 'Location', content: 'Berlin, Germany'},
         {label: 'Occupation', content: 'FIAE Student at BBQ Berlin'},
-        {label: 'Email', content: mailTo()},
+        {label: 'Email', content: + mailTo()},
     ];
 
     return (
