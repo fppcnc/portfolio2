@@ -3,7 +3,7 @@ import {sectionsData} from "../../../data/sectionsData";
 import {useEffect} from "react";
 const MenuItems = () => {
 
-    const [activeMenuItem, setActiveMenuItem] = useState(0);
+    const [activeMenuItem, setActiveMenuItem] = useState(-1);
     const handleItemClick = (index) => {
         setActiveMenuItem(index);
         scrollToSection(index);

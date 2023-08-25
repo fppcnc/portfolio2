@@ -11,11 +11,11 @@ const Paragraphs = () => {
     return (
         <div className="containerParagraphs">
             <div className="paragraphs">
-                <div className="containerParagraph">
+            {/*    <div className="containerParagraph">*/}
 
-                <Welcome />
+            {/*    <Welcome />*/}
 
-            </div>
+            {/*</div>*/}
                 {sectionsData.map((sectionData, index) => (
                     <div className="containerParagraph">
                         <div

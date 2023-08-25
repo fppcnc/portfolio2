@@ -1,13 +1,39 @@
 import Navbar from "./components/Navbar/Navbar";
 import Paragraphs from "./components/Paragraphs/Paragraphs";
+import {createContext, useState} from "react";
+import "./app.css"
+import Switch from "react-switch";
 
+export const ThemeContext = createContext(null)
 function App() {
+    const [theme, setTheme] = useState("light");
+    const toggleTheme = () => {
+        setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    };
+
   return (
-    <div className="App">
+      <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="App" id={theme}>
+        <div className="switch">
+            <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+        <Switch checked={theme === "dark"} onChange={toggleTheme}     onColor="#86d3ff"
+                onHandleColor="#2693e6"
+                handleDiameter={30}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                height={20}
+                width={48}
+                className="react-switch"
+                id="material-switch"
+        />
+        </div>
       <Navbar />
         <Paragraphs />
 
     </div>
+</ThemeContext.Provider>
   );
 }
 

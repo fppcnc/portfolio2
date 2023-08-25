@@ -1,0 +1,38 @@
+.App {
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+#light {
+    background: #fff;
+    color: #fff;
+}
+
+#dark {
+    background: #011802;
+    color: #012604;
+}
+
+.switch {
+    position: fixed;
+    display: flex;
+    width: 150px;
+    height: 30px;
+    right: 30px;
+    top: 15px;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.switch  label {
+    margin:5px;
+
+}
+
+#light .switch label {
+    color: black;
+}
+
+#dark .switch label {
+    color: white;
+}

@@ -49,25 +49,26 @@ const Home = () => {
                 <p>Hello! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
                     crafting the perfect pizza, I've ventured into the world of web development to create digital
                     experiences that are just as satisfying.</p>
-                <p>I bring a unique blend of skills to the table. My journey began in Italy, where I discovered at a
-                    young age my love for baking and crafting. From kneading dough in Italy to perfecting the art of
-                    pizza-making in the vibrant food scene of Melbourne, Australia, my culinary skills evolved across
-                    continents. My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of
-                    growth. I started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens
-                    to
-                    coding terminals. As I continue this educational path, my passion for learning remains as fresh as a
+                <p>My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of growth. I
+                    started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens to coding
+                    terminals. As I continue this educational path, my passion for learning remains as fresh as a
                     just-baked pizza.</p>
-                <p>In the realm of web development, I thrive on crafting intuitive and user-centric experiences. My
-                    skills span from creating responsive layouts to bringing intricate designs to life. With each
-                    project, I aim to blend the precision I developed in the course of the years with my coding prowess
-                    to serve up digital solutions that leave a lasting taste.</p>
+                <p>In the realm of web development, I thrive on crafting
+                    intuitive and user-centric experiences. My
+                    journey began with PHP, where I crafted small logic pieces that laid the foundation for my coding
+                    journey. SQL quickly became an important companion as I ventured into backend development. As I
+                    expanded my skills, I delved into CSS and HTML, seamlessly combining them with PHP to bring my
+                    creations to life. JavaScript was my next logical step, allowing me to add interactivity and dynamic
+                    features to my projects. Once I felt confident, I embraced frameworks such as Laravel, Symfony, and
+                    React, leveraging their power to create robust and efficient applications.</p>
                 <p>In my free time, you'll find me immersed in coding challenges, exploring new frameworks, and staying
                     connected with the vibrant developer community. I approach every project with enthusiasm, embracing
                     each challenge as an opportunity to grow and refine my skills.</p>
                 <p>Beyond the screen, I find solace in the kitchen, experimenting with flavors, and perfecting my baking
-                    recipes—the timeless treasures that inspired my journey. Cooking and baking are my creative outlets
+                    recipes—the timeless treasures that inspired my journey. Cooking and baking are my creative outlets,
                     and just as I blend diverse ingredients to create unforgettable dishes, I blend my skills to create
                     exceptional digital experiences.</p>
+
             </div>
         </>
     )
