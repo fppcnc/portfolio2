@@ -4,13 +4,13 @@ import MenuItems from "./childs/MenuItems";
 import Socials from "./childs/Socials";
 import Me from "./childs/Me";
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     return (
         <div className="containerNavbar">
             <nav className="navbar">
                 <Me/>
-                <MenuItems/>
+                <MenuItems sectionsData={props.sectionsData}/>
                 <Socials/>
             </nav>
         </div>

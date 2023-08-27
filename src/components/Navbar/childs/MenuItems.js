@@ -1,16 +1,17 @@
 import React, {useState} from "react";
-import {sectionsData} from "../../../data/sectionsData";
 import {useEffect} from "react";
-const MenuItems = () => {
+const MenuItems = (props) => {
 
     const [activeMenuItem, setActiveMenuItem] = useState(-1);
+
     const handleItemClick = (index) => {
-        setActiveMenuItem(index);
-        scrollToSection(index);
-    };
+            setActiveMenuItem(index)
+            scrollToSection(index)
+        };
+
 
     const scrollToSection = (index) => {
-        const sectionId = sectionsData[index].title.toLowerCase();
+        const sectionId = props.sectionsData[index].title.toLowerCase();
         const sectionElement = document.getElementById(sectionId);
         if (sectionElement) {
             sectionElement.scrollIntoView({ behavior: 'smooth' });
@@ -44,7 +45,7 @@ const MenuItems = () => {
 
     return (
         <div className="desktopMenu" >
-            {sectionsData.map((sectionData, index) => (
+            {props.sectionsData.map((sectionData, index) => (
                 <div
                     key={index}
                     className={`desktopMenuListItem bordersRules ${activeMenuItem === index ? 'active' : ''}`}
