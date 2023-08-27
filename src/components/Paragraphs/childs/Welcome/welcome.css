@@ -7,12 +7,39 @@
     text-align: center;
     white-space: pre-line;
     /*scroll-snap-align: start;*/
-    width: 100%;
+    max-width: 100%;
     min-height: calc(100vh - 100px);
     padding: 20px 40px;
     background: #27ae60;
     border-radius: 8px;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+@keyframes scroll {
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-150px * 8))
+    }
+}
+.welcome .slider {
+    height:150px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
+.welcome .slider .slideTrack {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(150px * 16);
+}
+
+.welcome .slider .slide {
+    height: 150px;
+    width: 150px;
+    margin: 0 70px;
 }
 

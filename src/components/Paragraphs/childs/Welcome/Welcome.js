@@ -1,52 +1,24 @@
-import {Typewriter} from "react-simple-typewriter";
 import "./welcome.css"
+import {TechLogos} from "../../../../data/technologyLogosData";
 
 const Welcome = () => {
 
     return (
 
         <div id="welcome" className="welcome">
+            <div className="slider">
+                <div className="slideTrack">
+                    {TechLogos.map((TechLogo) => (
+                        <div className="slide">
+                            {TechLogo}
+                        </div>
+                    ))}
 
-            {/*<ul>*/}
-            {/*    {sectionsData.map((sectionData) => (*/}
-            {/*        <li>*/}
-            {/*            <Typewriter*/}
-            {/*            words={*/}
-            {/*            [sectionData.title + " : " + sectionData.description]*/}
-            {/*        }*/}
-            {/*            typeSpeed={60}*/}
-            {/*            deleteSpeed={50}*/}
-            {/*            delay={150}*/}
-            {/*            pauseFor={1500}*/}
-            {/*            autoStart={true}*/}
-            {/*            loop={0}*/}
-            {/*        />*/}
 
-            {/*            /!*<Typewriter*!/*/}
-            {/*            /!*words={[sectionData.description]}*!/*/}
-            {/*            /!*typeSpeed={60}*!/*/}
-            {/*            /!*deleteSpeed={50}*!/*/}
-            {/*            /!*delay={10}*!/*/}
-            {/*            /!*pauseFor={false}*!/*/}
-            {/*            /!*autoStart={true}*!/*/}
-            {/*            /!*loop={true}*!/*/}
-                        {/*/>*/}
-            {/*        </li>*/}
-            {/*    )*/}
-            {/*    )}*/}
-            {/*</ul>*/}
-            {/*<Typewriter*/}
-            {/*    words={[*/}
-            {/*        "Enjoy!"*/}
-            {/*    ]}*/}
-            {/*    typeSpeed={60}*/}
-            {/*    deleteSpeed={50}*/}
-            {/*    delay={150}*/}
-            {/*    pauseFor={1500}*/}
-            {/*    autoStart={true}*/}
-            {/*    loop={true}*/}
-            {/*/>*/}
-        </div>)
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Welcome;
