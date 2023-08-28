@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Paragraphs from "./components/Paragraphs/Paragraphs";
 import {createContext, useState} from "react";

@@ -5,7 +5,6 @@ const Welcome = () => {
 
     return (
 
-        <div id="welcome" className="welcome">
             <div className="slider">
                 <div className="slideTrack">
                     {TechLogos.map((TechLogo) => (
@@ -17,7 +16,7 @@ const Welcome = () => {
 
                 </div>
             </div>
-        </div>
+
     )
 }
 

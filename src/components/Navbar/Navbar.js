@@ -10,8 +10,8 @@ const Navbar = (props) => {
         <div className="containerNavbar">
             <nav className="navbar">
                 <Me/>
-                <MenuItems sectionsData={props.sectionsData}/>
-                <Socials/>
+                <MenuItems sectionsData={props.sectionsData} singleComponent={{ title: "Welcome", icon: " " }} />
+                <Socials />
             </nav>
         </div>
     )

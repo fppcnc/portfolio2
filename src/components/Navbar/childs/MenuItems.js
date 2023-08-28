@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {useEffect} from "react";
 const MenuItems = (props) => {
 
-    const [activeMenuItem, setActiveMenuItem] = useState(-1);
+    const [activeMenuItem, setActiveMenuItem] = useState(null);
 
     const handleItemClick = (index) => {
             setActiveMenuItem(index)
@@ -30,7 +30,7 @@ const MenuItems = (props) => {
             });
         }, { rootMargin: "-50% 0px -50% 0px" });
 
-        const paragraphElements = document.querySelectorAll(".paragraph");
+        const paragraphElements = document.querySelectorAll("section");
         paragraphElements.forEach((element, index) => {
             element.setAttribute("data-index", index);
             observer.observe(element);
@@ -50,6 +50,7 @@ const MenuItems = (props) => {
                     key={index}
                     className={`desktopMenuListItem bordersRules ${activeMenuItem === index ? 'active' : ''}`}
                     onClick={() => {handleItemClick(index);}}
+                    style={{ display:  index === 0 ? 'none' : 'flex'}}
                 >
                     <div className="menuLinkWrapper">
                         <span>{sectionData.icon}</span>

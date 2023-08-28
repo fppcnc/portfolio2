@@ -80,7 +80,7 @@
     padding: 20px 15px;
     margin: 10px 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
+    /*display: flex;*/
     align-content: center;
     cursor: pointer;
 }
