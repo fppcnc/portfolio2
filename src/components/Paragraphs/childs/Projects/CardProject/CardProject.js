@@ -1,32 +1,31 @@
 import React from "react";
 
-const CardProject = () => {
+const CardProject = (sectionData) => {
 
 
     return (
         <>
 
+        <a href={sectionData.link}>
+        <img src={sectionData.img} className="project-img" alt={sectionData.title} loading="lazy"/>
+        </a>
 
-                <a href="#">
-                    <figure className="project-img loading">
-                        <img src="#" alt="#" loading="lazy" />
-                    </figure>
-                </a>
-                <h3 className="project-title">Marketing Dashboard</h3>
-                <p className="project-category">Application</p>
-                <p className="project-development">Vue.js | Bootstrap | CSS</p>
-                <div className="project-buttons">
-                    <a href="https://" style="pointer-events: none; opacity: 0.6;">
-                        <ion-icon name="eye-outline"></ion-icon> Preview
-                    </a>
-                    <a href="https://" style="pointer-events: none; opacity: 0.6;">
-                        <ion-icon name="logo-github"></ion-icon> GitHub
-                    </a>
-                </div>
-            </li>
+    <h3 className="project-title">{sectionData.title}</h3>
+    {/*<p className="project-development">{(sectionData.technologies.toString()).replaceAll(",", " | ")}</p>*/}
+    {/*<div className="project-buttons">*/}
+    {/*    <a href={sectionData.link}>*/}
+    {/*        <ion-icon name=""></ion-icon>*/}
+    {/*        Go To*/}
+    {/*    </a>*/}
+    {/*    <a href={sectionData.gitHub}>*/}
+    {/*        <ion-icon name="logo-github"></ion-icon>*/}
+    {/*        GitHub*/}
+    {/*    </a>*/}
+    {/*</div>*/}
 
-            </>
-            )
-            }
 
-            export default CardProject
+</>
+)
+}
+
+export default CardProject
