@@ -1,7 +1,7 @@
 import React,  { useState } from "react";
 import "./cardProject.css";
 import {ReactComponent as GitHub} from "../../../../../assets/github.svg";
-const CardProject = ({ projectData: { link, img, title, technologies, gitHub, description } }) => {
+const CardProject = ({ projectData: { link, img, title, technologies, gitHub, description, tags } }) => {
 
     const [isExpanded, setIsExpanded] = useState(false);  // State to manage card expansion
 
@@ -15,22 +15,29 @@ const CardProject = ({ projectData: { link, img, title, technologies, gitHub, de
             <p className="project-development">{technologies.join(" | ")}</p>
 
             <button onClick={toggleExpansion} className="expand-button" data-expanded={isExpanded}>
+                { /* Arrow direction is handled via CSS using the data-expanded attribute */ }
             </button>
+
             {isExpanded && (
-                <>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
+                <div className="project-content">
+                    <a href={link} target="_blank" rel="noopener noreferrer" className="project-img-container">
                         <img src={img} className="project-img" alt={title} loading="lazy"/>
                     </a>
-                    <p className="project-description">{description}</p>
                     <div className="project-buttons">
                         <a href={link} target="_blank" rel="noopener noreferrer">
-                            Preview
+                            Preview Project
                         </a>
                         <a href={gitHub} target="_blank" rel="noopener noreferrer">
                             <GitHub className="socialImg"/> GitHub
                         </a>
                     </div>
-                </>
+                    <p className="project-description">{description}</p>
+                    <div className="project-tags">
+                        {tags.map((tag, index) => (
+                            <span key={index} className="tag">{tag}</span>
+                        ))}
+                    </div>
+                </div>
             )}
         </div>
     )

@@ -3,8 +3,8 @@
     position: relative;
     display: block;
     width: 100%;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    margin-bottom: 5px;
+    border: 0;
     padding: 20px;
     border-radius: 10px;
     background: #b8877a;
@@ -18,9 +18,9 @@
 }
 
 .project-card img.project-img {
-    width: 45%;
+    width: 90%;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-top: 15px;
     margin-left: auto;
 }
 
@@ -31,7 +31,8 @@
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
+    flex-basis: 100%;
 }
 
 .project-card h3.project-title {
@@ -48,7 +49,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-padding: 0 100px;
+    padding: 0 100px;
 }
 
 .project-card div.project-buttons a {
@@ -93,4 +94,41 @@ padding: 0 100px;
 
 .expand-button[data-expanded="true"]:before {
     border-bottom: 8px solid white;
+}
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 20px;
+}
+
+.project-img-container {
+    flex: 0 0 45%;
+}
+
+.project-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-self: center;
+}
+
+.project-description {
+
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: 0.7rem;
+    color: #555;
 }

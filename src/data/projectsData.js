@@ -18,7 +18,7 @@ export const projectsData = [
             "object-oriented-programming",
             "hr-system",
             "hr-management",
-            " dynamic-storage"]
+            "dynamic-storage"]
     },
     {
         link: "B",
