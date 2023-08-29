@@ -8,7 +8,7 @@ const Projects = () => {
             <div className="projects" data-page="projects">
                 <ul className="project-list">
                 {projectsData.map((projectData, index) => (
-                    <li className="project-item">
+                    <li className="project-item" style={{ marker: "none"}} key={index}>
                         <CardProject projectData={projectData}/>
                     </li>
                 ))}

@@ -7,8 +7,8 @@ const Welcome = () => {
 
             <div className="slider">
                 <div className="slideTrack">
-                    {TechLogos.map((TechLogo) => (
-                        <div className="slide">
+                    {TechLogos.map((TechLogo, index) => (
+                        <div className="slide" key={index}>
                             {TechLogo}
                         </div>
                     ))}
