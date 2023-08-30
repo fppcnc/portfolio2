@@ -99,7 +99,7 @@
 .project-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     gap: 20px;
 }
 
