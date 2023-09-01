@@ -14,27 +14,18 @@
     display: inherit;
     width: 60%;
     padding: 20px;
+    background-color: cadetblue;
     flex-direction: row;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
     border-radius: 10px;
-    justify-content: space-evenly;
-    background: #b8877a;
     box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
-
+    justify-content: space-evenly;
 }
 
-.email-section {
-    background-color: cadetblue;
-}
 
-.socials-section {
-    background-color: cadetblue;
-}
 
-.support-section {
-    background-color: cadetblue;
-}
+
 
 .email-section input[type="text"] {
     flex: 1;
@@ -57,7 +48,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     height: 100%;
-    align-self: flex-end;
 }
 
 .email-section button:hover {
@@ -70,7 +60,7 @@
 }
 .socials-section a svg, .support-section a svg {
     transition: transform 0.7s ease;
-  }
+}
 
 .socials-section a svg, .support-section a svg {
     width: 32px;
@@ -96,4 +86,14 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+}
+
+.feedback-message {
+    color: black;
+}
+
+.support-introduction {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
