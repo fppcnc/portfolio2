@@ -12,9 +12,9 @@ import Welcome from "../components/Paragraphs/childs/Welcome/Welcome";
 
 export const sectionsData = [
     {id: "welcome", title: "" , description: "welcome section", icon: " ", content: <Welcome />},
-    {id: "home", title: "Home", description: "describes a little bit of me", icon: <HomeImg className = "desktopListImg"/>, content: <Home />},
+    // {id: "home", title: "Home", description: "describes a little bit of me", icon: <HomeImg className = "desktopListImg"/>, content: <Home />},
     {id: "about", title: "About", description: "serves to display which skill I have developed in the course of time",  icon: <AboutImg className = "desktopListImg"/>, content: <About />},
     {id: "projects", title: "Projects", description: "contains link to my projects", icon: <ProjectImg className = "desktopListImg"/>, content: <Projects />},
-    {id: "more", title: "More", description: "shows what else I am interested in", icon: <MoreImg className = "desktopListImg"/>, content: <More />},
+    // {id: "more", title: "More", description: "shows what else I am interested in", icon: <MoreImg className = "desktopListImg"/>, content: <More />},
     {id: "contact", title: "Contact", description: "to get in touch with me", icon: <ContactImg className = "desktopListImg"/>, content: <Contact />},
 ]
