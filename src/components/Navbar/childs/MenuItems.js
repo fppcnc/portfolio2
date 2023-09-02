@@ -29,7 +29,7 @@ const MenuItems = (props) => {
             });
         }, { rootMargin: "-50% 0px -50% 0px" });
 
-        const paragraphElements = document.querySelectorAll("section");
+        const paragraphElements = document.querySelectorAll("paragraph");
         paragraphElements.forEach((element, index) => {
             element.setAttribute("data-index", index);
             observer.observe(element);

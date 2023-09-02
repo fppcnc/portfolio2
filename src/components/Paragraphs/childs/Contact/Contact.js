@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import './contact.css';
-import {ReactComponent as GitHubLogo} from './contatLogos/github_logo.svg';
-import {ReactComponent as InstagramLogo} from './contatLogos/instagram_logo.svg';
-import {ReactComponent as LinkedInLogo} from './contatLogos/linkedin_logo.svg';
-import {ReactComponent as RedditLogo} from './contatLogos/reddit_logo.svg';
-import {ReactComponent as PayPalLogo} from './contatLogos/paypal_logo.svg';
-import {ReactComponent as GitHubSponsorLogo} from './contatLogos/githubsponsor_logo.svg';
-import {ReactComponent as CopyLogo} from "./contatLogos/copy.svg";
+import {ReactComponent as GitHubLogo} from '../../../../assets/contatLogos/github_logo.svg';
+import {ReactComponent as InstagramLogo} from '../../../../assets/contatLogos/instagram_logo.svg';
+import {ReactComponent as LinkedInLogo} from '../../../../assets/contatLogos/linkedin_logo.svg';
+import {ReactComponent as RedditLogo} from '../../../../assets/contatLogos/reddit_logo.svg';
+import {ReactComponent as PayPalLogo} from '../../../../assets/contatLogos/paypal_logo.svg';
+import {ReactComponent as GitHubSponsorLogo} from '../../../../assets/contatLogos/githubsponsor_logo.svg';
+import {ReactComponent as CopyLogo} from "../../../../assets/contatLogos/copy.svg";
 
 const Contact = () => {
     const [showFeedback, setShowFeedback] = useState(false);
@@ -23,7 +23,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact-container">
+        <div className="contact">
             <label>Email</label>
             <section className="email-section">
                 {showFeedback ? <p>Email copied to clipboard!</p> :
