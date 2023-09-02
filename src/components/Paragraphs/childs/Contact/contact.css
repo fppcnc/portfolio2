@@ -15,7 +15,6 @@
     width: 60%;
     padding: 20px;
     background-color: cadetblue;
-    flex-direction: row;
     position: relative;
     margin-bottom: 50px;
     border-radius: 10px;
@@ -23,8 +22,20 @@
     justify-content: space-evenly;
 }
 
+.email-section, .socials-section {
+flex-direction: row;
+}
 
+.support-section {
+    flex-direction: column;
+}
 
+.support-section > div {
+    display:inherit;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
 
 
 .email-section input[type="text"] {

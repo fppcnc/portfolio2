@@ -26,7 +26,6 @@ const Contact = () => {
         <div className="contact-container">
             <label>Email</label>
             <section className="email-section">
-
                 {showFeedback ? <p>Email copied to clipboard!</p> :
                     <p>concatofilippo94@gmail.com</p>}
                 <button onClick={copyEmailToClipboard}><CopyLogo/></button>
@@ -43,17 +42,17 @@ const Contact = () => {
                     <p>u/Fel_ope</p></a>
             </section>
             <label>Support</label>
-            <p className="support-introduction">Every bit of support propels what I love forward.
-
-            Your support does more than just fund a project. It fuels my passion, keeps my dream alive, and directly impacts the costs associated with bringing this vision to life. Every donation ensures that all this remains active, updated, and continues to make a difference.
-
-            Thank you for considering supporting my journey and this project. Let's make a difference together! </p>
             <section className="support-section">
-
-                <a href="https://paypal.me/fppcnc?country.x=DE&locale.x=en_US" target="_blank"
-                   rel="noopener noreferrer"><PayPalLogo/><p>paypal.me</p></a>
-                <a href="https://github.com/fppcnc" target="_blank" rel="noopener noreferrer"><GitHubSponsorLogo/>
-                    <p>GitHub Sponsor</p></a>
+                <div>
+                    <a href="https://paypal.me/fppcnc?country.x=DE&locale.x=en_US" target="_blank"
+                       rel="noopener noreferrer"><PayPalLogo/><p>paypal.me</p></a>
+                    <a href="https://github.com/fppcnc" target="_blank" rel="noopener noreferrer"><GitHubSponsorLogo/>
+                        <p>GitHub Sponsor</p></a>
+                </div>
+                <p className="support-introduction">Hey there! Every little bit you chip in goes a long way. It's not
+                    just about the money; it's about believing in what I'm doing. Your support keeps the dream alive and
+                    the wheels turning. So, if you're thinking of helping out, just know it means the world to me. Big
+                    thanks for even considering it! Let's rock this together! Cheers!</p>
             </section>
         </div>
     );
