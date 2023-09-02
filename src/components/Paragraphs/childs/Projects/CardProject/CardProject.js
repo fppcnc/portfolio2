@@ -6,7 +6,7 @@ const CardProject = ({ projectData: { link, img, title, technologies, gitHub, de
     const [isExpanded, setIsExpanded] = useState(false);  // State to manage card expansion
 
     const toggleExpansion = () => {
-        setIsExpanded(!isExpanded);  // Toggle the expansion state
+        setIsExpanded(!isExpanded);
     }
 
     return (
@@ -15,7 +15,6 @@ const CardProject = ({ projectData: { link, img, title, technologies, gitHub, de
             <p className="project-development">{technologies.join(" | ")}</p>
 
             <button onClick={toggleExpansion} className="expand-button" data-expanded={isExpanded}>
-                { /* Arrow direction is handled via CSS using the data-expanded attribute */ }
             </button>
 
             {isExpanded && (
