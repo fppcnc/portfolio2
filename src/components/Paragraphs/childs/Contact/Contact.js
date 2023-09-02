@@ -49,10 +49,10 @@ const Contact = () => {
                     <a href="https://github.com/fppcnc" target="_blank" rel="noopener noreferrer"><GitHubSponsorLogo/>
                         <p>GitHub Sponsor</p></a>
                 </div>
-                <p className="support-introduction">Hey there! Every little bit you chip in goes a long way. It's not
+                <p className="support-introduction">Every little bit you chip in goes a long way. It's not
                     just about the money; it's about believing in what I'm doing. Your support keeps the dream alive and
-                    the wheels turning. So, if you're thinking of helping out, just know it means the world to me. Big
-                    thanks for even considering it! Let's rock this together! Cheers!</p>
+                    the wheels turning. So, if you're thinking of helping out, just know it means the world to me.</p>
+                <p className="support-introduction">Big thanks for even considering it! Let's rock this together! Cheers!</p>
             </section>
         </div>
     );

@@ -26,10 +26,17 @@ const Welcome = () => {
 
     return (
         <>
+            <h1>Hello! I am Filippo</h1>
+            <h4>a Student</h4>
+            <h4>a Web Designer</h4>
+            <h4>a Pizza Maker</h4>
+            <h4>a Chef</h4>
+            <h4>a good Friend</h4>
             <div className="wave wave1"></div>
             <div className="wave wave2"></div>
             <div className="wave wave3"></div>
             <div className="wave wave4"></div>
+            <div className="wave wave5"></div>
             <div className="slider">
                 <div className="slideTrack">
                     {images.map((image, index) => (

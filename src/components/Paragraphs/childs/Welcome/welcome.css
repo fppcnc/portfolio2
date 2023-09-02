@@ -131,3 +131,29 @@
     }
 }
 
+.wave.wave5 {
+    animation: animate5 7s linear infinite;
+    z-index: 3;
+    opacity: 0.2;
+    animation-delay: -5s;
+    bottom:15px;
+}
+
+@keyframes animate5 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+h1, h2, h3, h4 {
+    text-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+
+h4 {
+    padding: 3px;
+}
+
