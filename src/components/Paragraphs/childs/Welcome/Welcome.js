@@ -26,12 +26,10 @@ const Welcome = () => {
 
     return (
         <>
-            <h1>Hello! I am Filippo</h1>
+            <h1>Hello!</h1>
+            <h2>I am Filippo</h2>
             <h4>a Student</h4>
             <h4>a Web Designer</h4>
-            <h4>a Pizza Maker</h4>
-            <h4>a Chef</h4>
-            <h4>a good Friend</h4>
             <div className="wave wave1"></div>
             <div className="wave wave2"></div>
             <div className="wave wave3"></div>
