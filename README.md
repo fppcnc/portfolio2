@@ -22,7 +22,7 @@
 
 ### Prerequisites
 
-- Node.js
+- React
 - NPM/Yarn
 
 ### Installation
