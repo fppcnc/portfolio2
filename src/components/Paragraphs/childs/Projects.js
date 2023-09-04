@@ -1,6 +1,6 @@
 import React from "react";
-import CardProject from "./CardProject/CardProject";
-import {projectsData} from "../../../../data/projectsData";
+import CardProject from "./CardProject";
+import {projectsData} from "../../../data/projectsData";
 const Projects = () => {
     return (
         <>

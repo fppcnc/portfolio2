@@ -1,5 +1,5 @@
 .App {
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 #light {
@@ -24,8 +24,8 @@
     z-index: 5;
 }
 
-.switch  label {
-    margin:5px;
+.switch label {
+    margin: 5px;
 
 }
 
@@ -73,7 +73,6 @@ img, svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.2);*/
     box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
     flex-flow: column wrap;
 }
@@ -88,7 +87,7 @@ img, svg {
     z-index: 3;
 }
 
-.containerNavbar .navbar{
+.containerNavbar .navbar {
     width: inherit;
     height: 100%;
     background: #27ae60;
@@ -267,12 +266,11 @@ img, svg {
 /* Navbar Collapse for Small Screens */
 
 
-
 @media (max-width: 768px) {
 
-        .containerNavbar {
-            display: none;
-        }
+    .containerNavbar {
+        display: none;
+    }
 
     .containerNavbar {
         width: 100%;
@@ -285,10 +283,6 @@ img, svg {
         transition-duration: 0.2s;
     }
 
-
-    /*.containerNavbar:hover {*/
-    /*    width: 100%;*/
-    /*}*/
 
     .navbar h1 {
         font-size: 1rem;
@@ -317,7 +311,6 @@ img, svg {
     height: 100vh;
     max-height: 85%;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
 }
 
 .paragraphs {
@@ -325,15 +318,11 @@ img, svg {
     display: grid;
     flex-wrap: wrap;
     align-content: space-between;
-    margin-bottom: 100px;
 }
 
 .containerParagraph {
     display: inherit;
     width: 100%;
-    scroll-snap-align: start;
-    padding-top: 50px;
-    padding-bottom: 150px;
     margin-bottom: 100px;
 }
 
@@ -351,31 +340,29 @@ img, svg {
     box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
 }
 
-
-.paragraph.even {
+.containerParagraph:nth-child(even) .paragraph {
     justify-self: left;
     background-color: #7ab887;
 }
 
-
-.paragraph.odd {
+.containerParagraph:nth-child(odd) .paragraph {
     background-color: #7ab887;
     justify-self: right;
 }
 
-
-.paragraph.odd p, .paragraph.even p {
+.containerParagraph:nth-child(odd) .paragraph p, .containerParagraph:nth-child(even) .paragraph p {
     text-align: justify;
     padding: 5px 0;
 }
 
-.paragraph.even h1, .paragraph.odd h1 {
+.containerParagraph:nth-child(even) .paragraph h1, .containerParagraph:nth-child(odd) .paragraph h1 {
     top: 20px;
     padding: 10px;
     margin-bottom: 10px;
     z-index: 1;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Responsive Paragraphs */
 
@@ -396,9 +383,23 @@ img, svg {
         margin-bottom: 50px;
     }
 
-    .paragraph {
-        width: 90%;
-        padding: 15px 30px;
+
+    .containerParagraph .paragraph {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: pre-line;
+        width: 100%;
+        overflow: hidden;
+        min-height: calc(100vh - 100px);
+        padding: 20px 40px;
+        background: #27ae60;
+        border-radius: 8px;
+        border: 0;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
     }
 
     .paragraph h1 {
@@ -408,13 +409,14 @@ img, svg {
 
 /*About.css*/
 
-.gridHome {
+.gridAbout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     width: 90%;
 }
-.gridHome > *:nth-last-child(odd):last-child {
+
+.gridAbout > *:nth-last-child(odd):last-child {
     grid-column: span 2;
     justify-self: center;
 }
@@ -423,8 +425,7 @@ img, svg {
     padding: 20px;
     border: 0;
     border-radius: 5px;
-    width:100%;
-    /*background: #ff7985;*/
+    width: 100%;
     background: #ffa051;
     box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
 
@@ -445,6 +446,7 @@ img, svg {
 .spanWrapper {
     flex-direction: row;
 }
+
 .myProgress {
     background-color: white;
     border: 2px solid black;
@@ -456,18 +458,30 @@ img, svg {
 
 .myBar {
     height: 100%;
-    background-color:#7ab887;
+    background-color: #7ab887;
     border-radius: 3px;
     transition: width 0.5s;
-    border-right:1px solid black;
+    border-right: 1px solid black;
 }
 
-.proficiencyLabel {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
+/*Responsive About.css*/
+@media (max-width: 768px) {
+    p {
+        font-size: 0.8rem;
+    }
 
+    .gridAbout {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .myProgress {
+        width: 95%;
+    }
+    .spanWrapper {
+        font-size: 0.8rem;
+    }
+}
 
 
 /*Contact.css*/
@@ -513,7 +527,7 @@ img, svg {
 }
 
 .support-section > div {
-    display:inherit;
+    display: inherit;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 20px 0;
@@ -532,6 +546,7 @@ img, svg {
     width: 20px;
     height: 20px;
 }
+
 .email-section button {
     padding: 5px 15px;
     border: 0;
@@ -546,16 +561,18 @@ img, svg {
 .email-section button:hover {
     background-color: #45a049;
 }
+
 .socials-section a {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     box-sizing: border-box;
 }
 
-    .socials-section a, .support-section a {
+.socials-section a, .support-section a {
     transition: transform 0.7s ease;
     flex-direction: column;
 }
+
 .socials-section a svg, .support-section a svg {
     transition: transform 0.7s ease;
 }
@@ -596,9 +613,40 @@ img, svg {
     line-height: 1.4;
 }
 
+/*Responsive Contact.css*/
+@media (max-width: 768px) {
+
+    .email-section button {
+        display: none;
+    }
+
+    .email-section, .socials-section, .support-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .support-introduction {
+        font-size: 0.8rem; /* reduce font size */
+    }
+
+    .socials-section a svg, .support-section a svg {
+        width: 32px; /* reduce icon size */
+        height: 32px;
+    }
+    .socials-section a p {
+        display: none;
+    }
+
+    .contact {
+        padding: 10px;
+    }
+}
+
+
+
 /*Home.css*/
 
-.grid {
+.gridHome {
     height: auto;
     width: 100%;
     display: flex;
@@ -608,7 +656,8 @@ img, svg {
     row-gap: 50px;
     column-gap: 50px;
 }
-.grid > div {
+
+.gridHome > div {
     display: flex;
     flex-basis: calc(50% - 40px);
     justify-content: center;
@@ -617,9 +666,7 @@ img, svg {
 }
 
 
-
-
-.grid > div > div {
+.gridHome > div > div {
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
@@ -627,13 +674,31 @@ img, svg {
     border-bottom: solid 1px;
 }
 
-.gridImg {
+.gridHomeImg {
     width: 15px;
     height: 15px;
     position: absolute;
     left: 5px;
 }
 
+/* Responsive Home.css */
+@media (max-width: 768px) {
+    .gridHomeImg {
+        display: none;
+    }
+
+    .gridHome {
+        row-gap: 20px;
+        width: 100%;
+        /*column-gap: 20px;*/
+    }
+
+    .gridHome > div {
+        flex-basis: 100%;
+        font-size: 0.8em;
+        /*padding: 10px;*/
+    }
+}
 /*Project.css & CardsProject.css*/
 .projects {
     width: 100%;
@@ -646,6 +711,16 @@ img, svg {
     margin-bottom: 10px;
 }
 
+.project-item {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    background: #b8877a;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+
+}
+
 ul {
     list-style: none;
 }
@@ -655,12 +730,9 @@ ul {
     position: relative;
     display: block;
     width: 100%;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
     border: 0;
     padding: 20px;
-    border-radius: 10px;
-    background: #b8877a;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
 
 }
 
@@ -688,7 +760,7 @@ ul {
 }
 
 .project-card h3.project-title {
-    font-size: 24px;
+    /*font-size: 24px;*/
     margin-bottom: 10px;
 }
 
@@ -785,6 +857,61 @@ ul {
     color: #555;
 }
 
+/*Responsive Projects.css and CardProject.css*/
+
+@media (max-width: 768px) {
+    .project-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-card img.project-img {
+        width: 100%;
+    }
+
+    .project-card p.project-description {
+        font-size: 14px;
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .project-card div.project-buttons {
+        padding: 0 50px;
+    }
+
+    .expand-button {
+        top: 20px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-img-container {
+        flex: 0 0 100%;
+    }
+
+    .project-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .tag {
+        font-size: 0.5rem;
+        padding: 5px 5px;
+    }
+}
+
 /*Welcome.css*/
 
 .paragraphwelcome {
@@ -795,7 +922,6 @@ ul {
     justify-content: center;
     text-align: center;
     white-space: pre-line;
-    /*scroll-snap-align: start;*/
     max-width: 100%;
     overflow: hidden;
     min-height: calc(100vh - 100px);
@@ -856,7 +982,7 @@ ul {
     z-index: 2;
     opacity: 1;
     animation-delay: 0s;
-    bottom:0;
+    bottom: 0;
 }
 
 @keyframes animate {
@@ -874,7 +1000,7 @@ ul {
     z-index: 2;
     opacity: 0.5;
     animation-delay: -5s;
-    bottom:30px;
+    bottom: 30px;
 }
 
 @keyframes animate2 {
@@ -891,7 +1017,7 @@ ul {
     z-index: 3;
     opacity: 0.2;
     animation-delay: -2s;
-    bottom:25px;
+    bottom: 25px;
 }
 
 @keyframes animate3 {
@@ -908,7 +1034,7 @@ ul {
     z-index: 3;
     opacity: 0.4;
     animation-delay: -5s;
-    bottom:17px;
+    bottom: 17px;
 }
 
 @keyframes animate4 {
@@ -925,7 +1051,7 @@ ul {
     z-index: 3;
     opacity: 0.2;
     animation-delay: -5s;
-    bottom:15px;
+    bottom: 15px;
 }
 
 @keyframes animate5 {
@@ -945,4 +1071,7 @@ h1, h2, h3, h4 {
 h4 {
     padding: 3px;
 }
+
+
+
 

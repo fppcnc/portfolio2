@@ -12,7 +12,7 @@ export const languagesProficiency = [
         category: "Frontend", lang: "JavaScript", proficiency: 90
     },
     {
-        category: "Frontend", lang: "Typescript", proficiency: 70
+        category: "Frontend", lang: "TypeScript", proficiency: 70
     },
     {
         category: "Frontend", lang: "React", proficiency: 85

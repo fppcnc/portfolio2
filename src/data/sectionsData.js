@@ -3,12 +3,12 @@ import {ReactComponent as AboutImg} from "../assets/user-solid.svg";
 import {ReactComponent as ProjectImg} from "../assets/diagram-project-solid.svg";
 import {ReactComponent as MoreImg} from "../assets/icons-solid.svg";
 import {ReactComponent as ContactImg} from "../assets/address-book-solid.svg";
-import Home from "../components/Paragraphs/childs/Home/Home.js";
-import About from "../components/Paragraphs/childs/About/About";
-import Contact from "../components/Paragraphs/childs/Contact/Contact";
-import More from "../components/Paragraphs/childs/More/More";
-import Projects from "../components/Paragraphs/childs/Projects/Projects";
-import Welcome from "../components/Paragraphs/childs/Welcome/Welcome";
+import Home from "../components/Paragraphs/childs/Home.js";
+import About from "../components/Paragraphs/childs/About";
+import Contact from "../components/Paragraphs/childs/Contact";
+import More from "../components/Paragraphs/childs/More";
+import Projects from "../components/Paragraphs/childs/Projects";
+import Welcome from "../components/Paragraphs/childs/Welcome";
 
 export const sectionsData = [
     {id: "welcome", title: "" , description: "welcome section", icon: " ", content: <Welcome />},

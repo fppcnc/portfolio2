@@ -1,5 +1,5 @@
 import React,  { useState } from "react";
-import {ReactComponent as GitHub} from "../../../../../assets/github.svg";
+import {ReactComponent as GitHub} from "../../../assets/github.svg";
 const CardProject = ({ projectData: { link, img, title, technologies, gitHub, description, tags } }) => {
 
     const [isExpanded, setIsExpanded] = useState(false);  // State to manage card expansion

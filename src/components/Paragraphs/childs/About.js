@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useRef} from "react";
-import {languagesProficiency} from "../../../../data/languagesProficiency";
+import {languagesProficiency} from "../../../data/languagesProficiency";
 
 const About = () => {
 
@@ -64,22 +64,19 @@ const About = () => {
 
     return (
         <>
-            <p>In the evolving landscape of the <strong>digital age</strong>, creating a meaningful and impactful <strong>online presence</strong> is paramount. I am a seasoned <strong>web developer</strong> and <strong>designer</strong> dedicated to turning your ideas into reality. With extensive experience in leveraging cutting-edge technologies, I specialize in <strong>creating websites</strong> that aren't just functional but are also visually stunning.
-
-                Whether you're a <strong>startup</strong> looking to make a mark in the online world, an <strong>established business</strong> aiming to revamp your online presence, or an entrepreneur venturing into <strong>e-commerce</strong>, I have the expertise to guide you through every step of the journey.
-
-                My proficiency spans across various technologies, ensuring that your website is not only responsive and <strong>user-friendly</strong> but also optimized for <strong>performance</strong>. Every project I undertake is backed by a deep understanding of modern design principles, ensuring that your brand stands out in the crowded digital space.
-
-                If you're searching for a dedicated partner to bring your web visions to life, look no further. Let's collaborate and craft digital experiences that resonate with your audience and drive results.</p>
+            <p>As a seasoned <strong>web developer</strong> in the digital age, I prioritize creating impactful <strong>online
+                presences</strong>. My expertise ranges from crafting visually stunning <strong>websites</strong> for <strong>startups</strong> to assisting <strong>established businesses</strong> in the digital realm. With a focus on <strong>responsiveness</strong>, <strong>user experience</strong> and <strong>performance</strong>, I ensure your brand shines online. Let's collaborate
+                and create memorable <strong>digital experiences</strong>.</p>
             <h3 style={{padding: "20px"}}>Language Skills Proficiency</h3>
-            <div className="gridHome">
+            <div className="gridAbout">
                 {Object.keys(groupedByCategory).map(category => (
                     <div key={category} className="categorySection">
                         <h4 className="categoryTitle">{category}</h4>
                         {groupedByCategory[category].map((language, index) => (
                             <div key={index} className="progressContainer">
                                 <div className="spanWrapper">
-                                    <span>{language.lang}</span> <span ref={el => percentageLabelsRef.current[globalIndex] = el}>0%</span>
+                                    <span>{language.lang}</span> <span
+                                    ref={el => percentageLabelsRef.current[globalIndex] = el}>0%</span>
                                 </div>
                                 <div className="myProgress">
                                     <div className="myBar" ref={el => barsRef.current[globalIndex++] = el}></div>
@@ -88,7 +85,8 @@ const About = () => {
                         ))}
                     </div>
                 ))}
-            </div></>
+            </div>
+        </>
     );
 }
 
