@@ -74,7 +74,7 @@ img, svg {
     flex-direction: column;
     align-items: center;
     /*box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.2);*/
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
     flex-flow: column wrap;
 }
 
@@ -156,7 +156,7 @@ img, svg {
 .containerNavbar .navbar .desktopMenu .desktopMenuListItem.active {
     background-color: #7ab887;
     transform: translateY(-2px) translateX(-2px);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
 
 
@@ -266,26 +266,13 @@ img, svg {
 
 /* Navbar Collapse for Small Screens */
 
-.navbar-toggle-button {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-}
+
 
 @media (max-width: 768px) {
 
         .containerNavbar {
             display: none;
         }
-
-        .navbar-toggle-button {
-            display: block;
-        }
-
 
     .containerNavbar {
         width: 100%;
