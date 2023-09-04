@@ -1,77 +1,97 @@
-import React from "react";
+import React, {useCallback, useEffect, useRef} from "react";
 import './about.css';
-import {ReactComponent as OccupationImg} from "../../../../assets/user-tie-solid.svg";
-import {ReactComponent as AgeImg} from "../../../../assets/calendar-days-solid.svg";
-import {ReactComponent as LocationImg} from "../../../../assets/location-dot-solid.svg";
-import {ReactComponent as EmailImg} from "../../../../assets/envelope-solid.svg";
+import {languagesProficiency} from "../../../../data/languagesProficiency";
 
 const About = () => {
 
-    const getDate = () => {
-        let dob = new Date("10/04/1994");
-        let month_diff = Date.now() - dob.getTime();
-        let age_dt = new Date(month_diff);
-        let year = age_dt.getUTCFullYear();
-        return Math.abs(year - 1969);
-
-    }
-
-    const email = 'concatofilippo94@gmail.com';
-
-    const mailTo = () => {
-        return <a href={`mailto:${email}`}>{email}</a>;
-    };
+    const barsRef = useRef([]);
+    const percentageLabelsRef = useRef([]);
+    let globalIndex = 0;
+    const animatedBars = useRef(new Set());
 
 
-    const gridContent = [
-        {label: 'Age', content: getDate() + ' years old', img: <AgeImg className="gridImg"/>},
-        {label: 'Location', content: 'Berlin, Germany', img: <LocationImg className="gridImg"/>},
-        {label: 'Occupation', content: 'FIAE Student at BBQ Berlin', img: <OccupationImg className="gridImg"/>},
-        {label: 'Email', content: mailTo(), img: <EmailImg className="gridImg"/>},
-    ];
+    const move = useCallback((elem, labelElem, proficiency) => {
+        let i = 0;
+        if (i === 0) {
+            i = 1;
+            let width = 0;
+            let id = setInterval(frame, 10);
+
+            function frame() {
+                if (width >= proficiency) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                    labelElem.innerText = width + "%";
+                }
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        barsRef.current.forEach((bar, index) => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    if (entries[0].isIntersecting && !animatedBars.current.has(bar)) {
+                        move(bar, percentageLabelsRef.current[index], languagesProficiency[index].proficiency);
+                        animatedBars.current.add(bar);
+                    }
+                },
+                {
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.1,
+                }
+            );
+
+            observer.observe(bar);
+
+            // Cleanup
+            return () => {
+                observer.unobserve(bar);
+            };
+        });
+    }, [move]);
+
+    const groupedByCategory = languagesProficiency.reduce((acc, item) => {
+        if (!acc[item.category]) {
+            acc[item.category] = [];
+        }
+        acc[item.category].push(item);
+        return acc;
+    }, {});
 
     return (
-
         <>
-            <div className="grid">
-                {gridContent.map((gridElement, index) => (
-                    <div key={index} className="gridElement">
-                        <div>
-                            {gridElement.img}
-                            <div>
-                                <div>{gridElement.label} : {gridElement.content}</div>
+            <p>In the evolving landscape of the <strong>digital age</strong>, creating a meaningful and impactful <strong>online presence</strong> is paramount. I am a seasoned <strong>web developer</strong> and <strong>designer</strong> dedicated to turning your ideas into reality. With extensive experience in leveraging cutting-edge technologies, I specialize in <strong>creating websites</strong> that aren't just functional but are also visually stunning.
+
+                Whether you're a <strong>startup</strong> looking to make a mark in the online world, an <strong>established business</strong> aiming to revamp your online presence, or an entrepreneur venturing into <strong>e-commerce</strong>, I have the expertise to guide you through every step of the journey.
+
+                My proficiency spans across various technologies, ensuring that your website is not only responsive and <strong>user-friendly</strong> but also optimized for <strong>performance</strong>. Every project I undertake is backed by a deep understanding of modern design principles, ensuring that your brand stands out in the crowded digital space.
+
+                If you're searching for a dedicated partner to bring your web visions to life, look no further. Let's collaborate and craft digital experiences that resonate with your audience and drive results.</p>
+            <h3 style={{padding: "20px"}}>Language Skills Proficiency</h3>
+            <div className="gridHome">
+                {Object.keys(groupedByCategory).map(category => (
+                    <div key={category} className="categorySection">
+                        <h4 className="categoryTitle">{category}</h4>
+                        {groupedByCategory[category].map((language, index) => (
+                            <div key={index} className="progressContainer">
+                                <div className="spanWrapper">
+                                    <span>{language.lang}</span> <span ref={el => percentageLabelsRef.current[globalIndex] = el}>0%</span>
+                                </div>
+                                <div className="myProgress">
+                                    <div className="myBar" ref={el => barsRef.current[globalIndex++] = el}></div>
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 ))}
-            </div>
-            <div>
-                <p>Hey Yo! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
-                    crafting the perfect pizza, I've ventured into the world of web development to create digital
-                    experiences that are just as satisfying.</p>
-                <p>My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of growth. I
-                    started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens to coding
-                    terminals. As I continue this educational path, my passion for learning remains as fresh as a
-                    just-baked pizza.</p>
-                <p>My expertise in web development is built on a solid foundation. Starting with PHP, I've honed my
-                    skills by crafting intricate logic pieces that underpin my coding voyage. The journey continued with
-                    a seamless integration of CSS and HTML, working harmoniously with PHP to bring my projects to life.
-                    As I delved into backend development, SQL became an indispensable companion, contributing to the
-                    robustness of my creations. The natural progression led me to JavaScript, enabling me to infuse
-                    interactivity and dynamic elements into my work. This evolution culminated in my adeptness with
-                    frameworks like Laravel, Symfony, and React, which I skillfully leverage to craft efficient and
-                    impactful applications.</p>
-                <p>In my free time, you'll find me immersed in coding challenges, exploring new frameworks, and staying
-                    connected with the vibrant developer community. I approach every project with enthusiasm, embracing
-                    each challenge as an opportunity to grow and refine my skills.</p>
-                <p>Beyond the screen, I find solace in the kitchen, experimenting with flavors, and perfecting my baking
-                    recipes—the timeless treasures that inspired my journey. Cooking and baking are my creative outlets,
-                    and just as I blend diverse ingredients to create unforgettable dishes, I blend my skills to create
-                    exceptional digital experiences.</p>
-
-            </div>
-        </>
-    )
+            </div></>
+    );
 }
 
 export default About;
+

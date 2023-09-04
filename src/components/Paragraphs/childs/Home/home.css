@@ -1,72 +1,35 @@
-.gridHome {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    width: 90%;
-}
-
-.categorySection {
-    padding: 20px;
-    border: 1px solid #e1e1e1;
-    border-radius: 5px;
-    width:100%;
-    background: #ff7985;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
-
-}
-
-.categoryTitle {
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.progressContainer {
+.grid {
+    height: auto;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 50px 0;
+    row-gap: 50px;
+    column-gap: 50px;
+}
+.grid > div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
-    margin: 10px 0;
-}
-
-.myProgress {
-    flex-grow: 1;
-    background-color: #f3f3f3;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 0 10px;
-    height: 20px;
-    width: 30%;
-}
-
-.myBar {
-    height: 100%;
-    background-color: #4CAF50;
-    border-radius: 5px;
-    transition: width 0.5s;
-}
-
-.proficiencyLabel {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    position: relative;
 }
 
 
-.proficiencyLabel[data-proficiency="Sufficient"] {
-    background-color: #f44336;
-    color: #fff;
+
+
+.grid > div > div {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    flex-direction: row;
+    border-bottom: solid 1px;
 }
 
-.proficiencyLabel[data-proficiency="Satisfactory"] {
-    background-color: rgba(192,184,2,0.75);
-    color: #fff;
-}
-
-.proficiencyLabel[data-proficiency="Good"] {
-    background-color: rgba(25,192,0,0.75);
-    color: #fff;
-}
-
-.proficiencyLabel[data-proficiency="Very Good"] {
-    background-color: rgba(0,192,142,0.75);
-    color: #fff;
+.gridImg {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 5px;
 }

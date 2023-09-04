@@ -1,103 +1,77 @@
-import React, {useCallback, useEffect, useRef} from "react";
+import React from "react";
 import './home.css';
-import {languagesProficiency} from "../../../../data/languagesProficiency";
+import {ReactComponent as OccupationImg} from "../../../../assets/user-tie-solid.svg";
+import {ReactComponent as AgeImg} from "../../../../assets/calendar-days-solid.svg";
+import {ReactComponent as LocationImg} from "../../../../assets/location-dot-solid.svg";
+import {ReactComponent as EmailImg} from "../../../../assets/envelope-solid.svg";
 
 const Home = () => {
 
-    const barsRef = useRef([]);
-    const labelsRef = useRef([]);
-    let globalIndex = 0;
-    const animatedBars = useRef(new Set());
-    const proficiencyToString = (percentage) => {
-        if (percentage >= 0 && percentage <= 25) {
-            return "Sufficient";
-        } else if (percentage > 25 && percentage <= 50) {
-            return "Satisfactory";
-        } else if (percentage > 50 && percentage <= 75) {
-            return "Good";
-        } else if (percentage > 75 && percentage <= 100) {
-            return "Very Good";
-        }
+    const getDate = () => {
+        let dob = new Date("10/04/1994");
+        let month_diff = Date.now() - dob.getTime();
+        let age_dt = new Date(month_diff);
+        let year = age_dt.getUTCFullYear();
+        return Math.abs(year - 1969);
+
+    }
+
+    const email = 'concatofilippo94@gmail.com';
+
+    const mailTo = () => {
+        return <a href={`mailto:${email}`}>{email}</a>;
     };
 
-    const move = useCallback((elem, labelElem, proficiency) => {
-        let i = 0;
-        if (i === 0) {
-            i = 1;
-            let width = 0;
-            let id = setInterval(frame, 10);
 
-            function frame() {
-                if (width >= proficiency) {
-                    clearInterval(id);
-                    i = 0;
-                } else {
-                    width++;
-                    elem.style.width = width + "%";
-                    labelElem.innerHTML = proficiencyToString(width);
-                    labelElem.setAttribute('data-proficiency', proficiencyToString(width));
-                }
-            }
-        }
-    }, []);
-
-    useEffect(() => {
-        barsRef.current.forEach((bar, index) => {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    if (entries[0].isIntersecting && !animatedBars.current.has(bar)) {
-                        move(bar, labelsRef.current[index], languagesProficiency[index].proficiency);
-                        animatedBars.current.add(bar);
-                    }
-                },
-                {
-                    root: null,
-                    rootMargin: "0px",
-                    threshold: 0,
-                }
-            );
-
-            observer.observe(bar);
-
-            // Cleanup
-            return () => {
-                observer.unobserve(bar);
-            };
-        });
-    }, [move]);
-
-    const groupedByCategory = languagesProficiency.reduce((acc, item) => {
-        if (!acc[item.category]) {
-            acc[item.category] = [];
-        }
-        acc[item.category].push(item);
-        return acc;
-    }, {});
+    const gridContent = [
+        {label: 'Age', content: getDate() + ' years old', img: <AgeImg className="gridImg"/>},
+        {label: 'Location', content: 'Berlin, Germany', img: <LocationImg className="gridImg"/>},
+        {label: 'Occupation', content: 'FIAE Student at BBQ Berlin', img: <OccupationImg className="gridImg"/>},
+        {label: 'Email', content: mailTo(), img: <EmailImg className="gridImg"/>},
+    ];
 
     return (
-        <div className="gridHome">
-            {Object.keys(groupedByCategory).map(category => (
-                <div key={category} className="categorySection">
-                    <h3 className="categoryTitle">{category}</h3>
-                    {groupedByCategory[category].map((language, index) => (
-                        <div key={index} className="progressContainer">
-                            <span>{language.lang}</span>
-                            <div className="myProgress">
-                                <div className="myBar" ref={el => barsRef.current[globalIndex] = el}></div>
+
+        <>
+            <div className="grid">
+                {gridContent.map((gridElement, index) => (
+                    <div key={index} className="gridElement">
+                        <div>
+                            {gridElement.img}
+                            <div>
+                                <div>{gridElement.label} : {gridElement.content}</div>
                             </div>
-                            <span
-                                style={{backgroundColor: proficiencyToString(language.proficiency)}}
-                                className="proficiencyLabel"
-                                data-proficiency={proficiencyToString(language.proficiency)}
-                                ref={el => labelsRef.current[globalIndex++] = el}>
-        {proficiencyToString(language.proficiency)}
-</span>
                         </div>
-                    ))}
-                </div>
-            ))}
-        </div>
-    );
+                    </div>
+                ))}
+            </div>
+            <div>
+                <p>Hey Yo! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
+                    crafting the perfect pizza, I've ventured into the world of web development to create digital
+                    experiences that are just as satisfying.</p>
+                <p>My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of growth. I
+                    started my Umschulung as FIAE, a transformative journey of transitioning from pizza ovens to coding
+                    terminals. As I continue this educational path, my passion for learning remains as fresh as a
+                    just-baked pizza.</p>
+                <p>My expertise in web development is built on a solid foundation. Starting with PHP, I've honed my
+                    skills by crafting intricate logic pieces that underpin my coding voyage. The journey continued with
+                    a seamless integration of CSS and HTML, working harmoniously with PHP to bring my projects to life.
+                    As I delved into backend development, SQL became an indispensable companion, contributing to the
+                    robustness of my creations. The natural progression led me to JavaScript, enabling me to infuse
+                    interactivity and dynamic elements into my work. This evolution culminated in my adeptness with
+                    frameworks like Laravel, Symfony, and React, which I skillfully leverage to craft efficient and
+                    impactful applications.</p>
+                <p>In my free time, you'll find me immersed in coding challenges, exploring new frameworks, and staying
+                    connected with the vibrant developer community. I approach every project with enthusiasm, embracing
+                    each challenge as an opportunity to grow and refine my skills.</p>
+                <p>Beyond the screen, I find solace in the kitchen, experimenting with flavors, and perfecting my baking
+                    recipes—the timeless treasures that inspired my journey. Cooking and baking are my creative outlets,
+                    and just as I blend diverse ingredients to create unforgettable dishes, I blend my skills to create
+                    exceptional digital experiences.</p>
+
+            </div>
+        </>
+    )
 }
 
 export default Home;
