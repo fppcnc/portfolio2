@@ -18,22 +18,22 @@ export const languagesProficiency = [
         category: "Database", lang: "MySQL", proficiency: 100
     },
     {
-        category: "Backend", lang: "PHP", proficiency: 100
+        category: "Backend", lang: "PHP", proficiency: 60
     },
     {
         category: "Backend", lang: "Laravel", proficiency: 40
     },
     {
-        category: "Backend", lang: "Symfony", proficiency: 60
+        category: "Backend", lang: "Symfony", proficiency: 40
     },
     {
         category: "Frontend", lang: "JavaScript", proficiency: 90
     },
     {
-        category: "Frontend", lang: "Typescript", proficiency: 85
+        category: "Frontend", lang: "Typescript", proficiency: 70
     },
     {
-        category: "Frontend", lang: "React", proficiency: 100
+        category: "Frontend", lang: "React", proficiency: 85
     },
     {
         category: "Other", lang: "HTML", proficiency: 100

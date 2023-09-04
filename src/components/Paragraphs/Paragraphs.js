@@ -10,10 +10,10 @@ const Paragraphs = (props) => {
                 {props.sectionsData.map((sectionData, index) => (
                     <div className={`containerParagraph`} key={sectionData.id} >
                         <span ref={ref} id={sectionData.title.toLowerCase()} style={{fontSize: "0.5rem"}}>{sectionData.title}</span>
-                        <paragraph className={`paragraph${sectionData.id === "welcome" ? 'welcome' : (index % 2 === 0 ? ' odd' : ' even')}`}>
+                        <section className={`paragraph${sectionData.id === "welcome" ? 'welcome' : (index % 2 === 0 ? ' odd' : ' even')}`}>
                             <h1 ref={ref} id={sectionData.title.toLowerCase()}>{sectionData.title}</h1>
                             {sectionData.content}
-                        </paragraph>
+                        </section>
                     </div>
                 ))}
             </div>
