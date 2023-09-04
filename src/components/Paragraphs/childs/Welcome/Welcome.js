@@ -1,4 +1,3 @@
-import "./welcome.css";
 import css3Image from '../../../../assets/technologyLogos/css-3.png';
 import gitImage from '../../../../assets/technologyLogos/git.png';
 import gitHubImage from '../../../../assets/technologyLogos/github.png';

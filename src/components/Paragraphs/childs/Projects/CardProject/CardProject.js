@@ -1,5 +1,4 @@
 import React,  { useState } from "react";
-import "./cardProject.css";
 import {ReactComponent as GitHub} from "../../../../../assets/github.svg";
 const CardProject = ({ projectData: { link, img, title, technologies, gitHub, description, tags } }) => {
 

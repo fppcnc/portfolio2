@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import './paragraphs.css';
 
 const Paragraphs = (props) => {
     const ref = useRef(null);

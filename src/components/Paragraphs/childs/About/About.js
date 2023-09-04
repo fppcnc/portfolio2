@@ -1,5 +1,4 @@
 import React, {useCallback, useEffect, useRef} from "react";
-import './about.css';
 import {languagesProficiency} from "../../../../data/languagesProficiency";
 
 const About = () => {

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './contact.css';
 import {ReactComponent as GitHubLogo} from '../../../../assets/contatLogos/github_logo.svg';
 import {ReactComponent as InstagramLogo} from '../../../../assets/contatLogos/instagram_logo.svg';
 import {ReactComponent as LinkedInLogo} from '../../../../assets/contatLogos/linkedin_logo.svg';

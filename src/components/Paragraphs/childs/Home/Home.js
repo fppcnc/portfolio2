@@ -1,5 +1,4 @@
 import React from "react";
-import './home.css';
 import {ReactComponent as OccupationImg} from "../../../../assets/user-tie-solid.svg";
 import {ReactComponent as AgeImg} from "../../../../assets/calendar-days-solid.svg";
 import {ReactComponent as LocationImg} from "../../../../assets/location-dot-solid.svg";
