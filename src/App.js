@@ -5,6 +5,7 @@ import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
 import { sectionsData } from "./data/sectionsData.js";
 import "./app.css";
 
+
 export const ThemeContext = createContext(null);
 
 function App() {

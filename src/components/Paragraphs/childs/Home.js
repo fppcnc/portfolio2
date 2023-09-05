@@ -45,7 +45,7 @@ const Home = () => {
                 ))}
             </div>
             <div>
-                <p>Hey Yo! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
+                <p>Hey There! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
                     crafting the perfect pizza, I've ventured into the world of web development to create digital
                     experiences that are just as satisfying.</p>
                 <p>My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of growth. From

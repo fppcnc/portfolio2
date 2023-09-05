@@ -45,19 +45,6 @@ img, svg {
     display: block;
 }
 
-@media (max-width: 800px) {
-    img.large, svg.large {
-        width: 90%;
-    }
-
-    img.medium, svg.medium {
-        width: 70%;
-    }
-
-    img.small, svg.small {
-        width: 50%;
-    }
-}
 
 /*Navbar.css*/
 
@@ -65,7 +52,7 @@ img, svg {
     width: 7%;
     transition: width 0.3s ease;
     transition-duration: 1s;
-    max-width: 300px;
+    max-width: 17%;
     height: 100%;
     background: #27ae60;
     padding: 30px 0;
@@ -78,7 +65,7 @@ img, svg {
 }
 
 .containerNavbar:hover {
-    width: 300px;
+    width: 17%;
 }
 
 .navbar {
@@ -104,7 +91,7 @@ img, svg {
 }
 
 .containerNavbar .navbar h1 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 10px;
     transition: all 0.3s ease;
     transition-duration: 1s;
@@ -113,7 +100,7 @@ img, svg {
 
 .containerNavbar:hover .navbar h1 {
     padding-top: 25px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .containerNavbar .navbar h3 {
@@ -257,48 +244,10 @@ img, svg {
     transition-duration: 1s;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
     background: #b8877a;
 }
 
-/* Responsive Navbar */
 
-/* Navbar Collapse for Small Screens */
-
-
-@media (max-width: 800px) {
-
-    .containerNavbar {
-        display: none;
-    }
-
-    .containerNavbar {
-        width: 100%;
-        max-width: none;
-        padding: 15px;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        transition-duration: 0.2s;
-    }
-
-
-    .navbar h1 {
-        font-size: 1rem;
-    }
-
-    .navbar h3 {
-        font-size: 0.8rem;
-    }
-
-    .containerNavbar .navbar h1,
-    .containerNavbar .navbar h3,
-    .containerNavbar .desktopMenuListItem .menuLinkWrapper .desktopMenuListItemText,
-    .containerNavbar .navbar .social_media a {
-        transition-duration: 0.2s;
-    }
-}
 
 /*Paragraphs.css*/
 
@@ -331,7 +280,7 @@ img, svg {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    width: 60%;
+    width: 70%;
     min-height: calc(100vh - 100px);
     padding: 20px 40px;
     background-color: #fff;
@@ -364,48 +313,6 @@ img, svg {
 }
 
 
-/* Responsive Paragraphs */
-
-@media (max-width: 800px) {
-    .containerParagraphs {
-        padding: 20px;
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .paragraphs {
-        margin-bottom: 50px;
-    }
-
-    .containerParagraph {
-        padding-top: 25px;
-        padding-bottom: 75px;
-        margin-bottom: 50px;
-    }
-
-
-    .containerParagraph .paragraph {
-        position: relative;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        white-space: pre-line;
-        width: 100%;
-        overflow: hidden;
-        min-height: calc(100vh - 100px);
-        padding: 20px 40px;
-        background: #27ae60;
-        border-radius: 8px;
-        border: 0;
-        box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
-    }
-
-    .paragraph h1 {
-        font-size: 1.5rem;
-    }
-}
 
 /*About.css*/
 
@@ -464,25 +371,6 @@ img, svg {
     border-right: 1px solid black;
 }
 
-/*Responsive About.css*/
-@media (max-width: 800px) {
-    p {
-        font-size: 0.8rem;
-    }
-
-    .gridAbout {
-        gap: 10px;
-        width: 100%;
-    }
-
-    .myProgress {
-        width: 95%;
-    }
-
-    .spanWrapper {
-        font-size: 0.8rem;
-    }
-}
 
 
 /*Contact.css*/
@@ -495,7 +383,6 @@ img, svg {
     gap: 20px;
     padding: 20px;
     height: 80%;
-    /*justify-content: space-between;*/
     width: 100%;
 }
 
@@ -507,7 +394,7 @@ img, svg {
 
 .email-section, .socials-section, .support-section {
     display: inherit;
-    width: 60%;
+    width: 100%;
     padding: 20px;
     background-color: cadetblue;
     position: relative;
@@ -614,35 +501,6 @@ img, svg {
     line-height: 1.4;
 }
 
-/*Responsive Contact.css*/
-@media (max-width: 800px) {
-
-    .email-section button {
-        display: none;
-    }
-
-    .email-section, .socials-section, .support-section {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .support-introduction {
-        font-size: 0.8rem; /* reduce font size */
-    }
-
-    .socials-section a svg, .support-section a svg {
-        width: 32px; /* reduce icon size */
-        height: 32px;
-    }
-
-    .socials-section a p {
-        display: none;
-    }
-
-    .contact {
-        padding: 10px;
-    }
-}
 
 
 /*Home.css*/
@@ -668,6 +526,7 @@ img, svg {
 
 
 .gridHome > div > div {
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
@@ -682,24 +541,6 @@ img, svg {
     left: 5px;
 }
 
-/* Responsive Home.css */
-@media (max-width: 800px) {
-    .gridHomeImg {
-        display: none;
-    }
-
-    .gridHome {
-        row-gap: 20px;
-        width: 100%;
-        /*column-gap: 20px;*/
-    }
-
-    .gridHome > div {
-        flex-basis: 100%;
-        font-size: 0.8em;
-        /*padding: 10px;*/
-    }
-}
 
 /*Project.css & CardsProject.css*/
 .projects {
@@ -732,7 +573,6 @@ ul {
     position: relative;
     display: block;
     width: 100%;
-    /*margin-bottom: 5px;*/
     border: 0;
     padding: 20px;
 
@@ -762,7 +602,6 @@ ul {
 }
 
 .project-card h3.project-title {
-    /*font-size: 24px;*/
     margin-bottom: 10px;
 }
 
@@ -775,7 +614,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 70px;
     flex-wrap: wrap;
 }
 
@@ -785,6 +624,9 @@ ul {
     justify-content: center;
     padding: 10px 20px;
     border-radius: 5px;
+    background-color: #27ae60;
+}
+.project-card div.project-buttons a:hover {
     background-color: #7ab887;
 }
 
@@ -795,7 +637,7 @@ ul {
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    background-color: #7ab887;
+    background-color: #27ae60;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -803,6 +645,9 @@ ul {
     transition: transform 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
 
+}
+.expand-button:hover {
+    background-color: #7ab887;
 }
 
 .expand-button:before {
@@ -859,60 +704,6 @@ ul {
     color: #555;
 }
 
-/*Responsive Projects.css and CardProject.css*/
-
-@media (max-width: 800px) {
-    .project-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .project-card {
-        padding: 15px;
-    }
-
-    .project-card img.project-img {
-        width: 100%;
-    }
-
-    .project-card p.project-description {
-        font-size: 14px;
-        max-width: 100%;
-        padding-bottom: 30px;
-    }
-
-    .project-card div.project-buttons {
-        padding: 0 50px;
-    }
-
-    .expand-button {
-        top: 20px;
-        right: 10px;
-        width: 25px;
-        height: 25px;
-    }
-
-    .project-content {
-        flex-direction: column;
-    }
-
-    .project-img-container {
-        flex: 0 0 100%;
-    }
-
-    .project-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 15px;
-    }
-
-    .tag {
-        font-size: 0.5rem;
-        padding: 5px 5px;
-    }
-}
 
 /*Welcome.css*/
 
@@ -1079,7 +870,227 @@ h4 {
     padding: 3px;
 }
 
+
+
+/* General responsive adjustments for images and SVGs */
+
 @media (max-width: 800px) {
+    img.large, svg.large {
+        width: 90%;
+    }
+
+    img.medium, svg.medium {
+        width: 70%;
+    }
+
+    img.small, svg.small {
+        width: 50%;
+    }
+
+
+    /* Responsive Navbar */
+    /* Navbar Collapses for Small Screens */
+
+
+    .containerNavbar {
+        display: none;
+    }
+
+    .containerNavbar {
+        width: 100%;
+        max-width: none;
+        padding: 15px;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        transition-duration: 0.2s;
+    }
+
+
+    .navbar h1 {
+        font-size: 1rem;
+    }
+
+    .navbar h3 {
+        font-size: 0.8rem;
+    }
+
+    .containerNavbar .navbar h1,
+    .containerNavbar .navbar h3,
+    .containerNavbar .desktopMenuListItem .menuLinkWrapper .desktopMenuListItemText,
+    .containerNavbar .navbar .social_media a {
+        transition-duration: 0.2s;
+    }
+
+
+    /* Responsive Paragraphs */
+
+    .containerParagraphs {
+        padding: 20px;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .paragraphs {
+        margin-bottom: 50px;
+    }
+
+    .containerParagraph {
+        padding-top: 25px;
+        padding-bottom: 75px;
+        margin-bottom: 50px;
+    }
+
+
+    .containerParagraph .paragraph {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: pre-line;
+        width: 100%;
+        overflow: hidden;
+        min-height: calc(100vh - 100px);
+        padding: 20px 40px;
+        background: #27ae60;
+        border-radius: 8px;
+        border: 0;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+    }
+
+    .paragraph h1 {
+        font-size: 1.5rem;
+    }
+
+
+    /*Responsive About.css*/
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .gridAbout {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .myProgress {
+        width: 95%;
+    }
+
+    .spanWrapper {
+        font-size: 0.8rem;
+    }
+
+
+    /*Responsive Contact.css*/
+
+
+    .email-section button {
+        display: none;
+    }
+
+    .email-section, .socials-section, .support-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .support-introduction {
+        font-size: 0.8rem; /* reduce font size */
+    }
+
+    .socials-section a svg, .support-section a svg {
+        width: 32px; /* reduce icon size */
+        height: 32px;
+    }
+
+    .socials-section a p {
+        display: none;
+    }
+
+    .contact {
+        padding: 10px;
+    }
+
+
+    /* Responsive Home.css */
+
+    .gridHomeImg {
+        display: none;
+    }
+
+    .gridHome {
+        row-gap: 20px;
+        width: 100%;
+        /*column-gap: 20px;*/
+    }
+
+    .gridHome > div {
+        flex-basis: 100%;
+        font-size: 0.8em;
+        /*padding: 10px;*/
+    }
+
+
+    /*Responsive Projects.css and CardProject.css*/
+
+    .project-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-card img.project-img {
+        width: 100%;
+    }
+
+    .project-card p.project-description {
+        font-size: 14px;
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .project-card div.project-buttons {
+        padding: 0 50px;
+    }
+
+    .expand-button {
+        top: 20px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-img-container {
+        flex: 0 0 100%;
+    }
+
+    .project-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .tag {
+        font-size: 0.5rem;
+        padding: 5px 5px;
+    }
+
+
+    /*Img in Welcome paragraph when navbar is collapsed*/
+
     .meWelcome {
         position: absolute;
         top: 50px;
@@ -1088,8 +1099,8 @@ h4 {
     }
 
     .meWelcome .mypic {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .meWelcome h3,.meWelcome h1 {
@@ -1097,6 +1108,124 @@ h4 {
     }
 
 }
+/* General responsive adjustments for images and SVGs */
+
+@media (min-width: 801px) and (max-width:1680px) {
+
+    /* General responsive adjustments for images and SVGs */
+    img, svg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /*Navbar.css*/
+    .containerNavbar {
+        --container-width: 12%;
+        width: var(--container-width);
+        max-width: 16%;
+        z-index: 100;
+    }
+
+    .containerNavbar:hover {
+        --container-width: 16%;
+        width: var(--container-width)
+    }
+
+    .navbar {
+        z-index: 50;
+    }
+
+    .containerNavbar .navbar h1 {
+        font-size: calc(0.8rem + var(--container-width) / 20);
+        padding:10px 0;
+        transition: all 0.3s ease;
+        transition-duration: 1s;
+    }
+
+    .containerNavbar:hover .navbar h1 {
+        padding-top: 25px;
+        font-size: calc(1.5rem + var(--container-width) / 10);
+    }
+
+    .containerNavbar:hover .navbar h3 {
+        font-size: 1rem;
+    }
+
+    .containerNavbar .navbar .desktopMenu .desktopMenuListItem {
+        padding: 20px 10px;
+    }
+
+    .containerNavbar .desktopMenuListItem .menuLinkWrapper .desktopMenuListItemText {
+        margin-left: 0;
+    }
+
+    .containerNavbar:hover .desktopMenuListItem .menuLinkWrapper .desktopMenuListItemText {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+
+    /*Single Elements*/
+    .desktopListImg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    /*Paragraphs.css*/
+    .containerParagraphs {
+        padding: 50px 2% 50px 4%;
+    }
+
+    .paragraph {
+        width: 85%;
+    }
+
+    .containerParagraph {
+        margin-bottom: 50px;
+    }
+
+    .paragraphwelcome {
+        max-width: 100%;
+    }
 
 
 
+    /*About.css*/
+    .gridAbout {
+        gap: 20px;
+    }
+
+
+    /*Project.css & CardsProject.css*/
+
+    .project-card img.project-img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .project-img-container {
+        width:100%;
+        flex: 0 0 100%;
+    }
+
+
+}
+
+@media (min-width: 801px) and (max-width: 1079px) {
+    .gridHome > div > div > svg {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1680px) {
+    .mypic {
+        height:30%;
+        width: 80%;
+    }
+    .containerNavbar:hover .mypic {
+        height:50%;
+        width: 80%;
+    }
+}
