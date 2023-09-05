@@ -6,7 +6,7 @@ https://concatofilippo.com/
 
 ## Overview
 
-https://github.com/fppcnc/portfolio2/blob/master/public/assets/projectsPreview/portfolio.png?raw=true)
+![portfolio](https://github.com/fppcnc/portfolio2/blob/master/public/assets/projectsPreview/portfolio.png?raw=true)
 
 *My portfolio serves as a digital reflection of my growth, skills, and experiences in the realm of software development. Crafted meticulously using JavaScript, React, and CSS, this platform offers a comprehensive look into the projects I've undertaken, the technologies I've mastered, and the challenges I've overcome.* 
 
