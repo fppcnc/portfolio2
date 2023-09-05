@@ -45,7 +45,7 @@ img, svg {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     img.large, svg.large {
         width: 90%;
     }
@@ -266,7 +266,7 @@ img, svg {
 /* Navbar Collapse for Small Screens */
 
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     .containerNavbar {
         display: none;
@@ -366,7 +366,7 @@ img, svg {
 
 /* Responsive Paragraphs */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .containerParagraphs {
         padding: 20px;
         max-width: 100%;
@@ -465,7 +465,7 @@ img, svg {
 }
 
 /*Responsive About.css*/
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     p {
         font-size: 0.8rem;
     }
@@ -615,7 +615,7 @@ img, svg {
 }
 
 /*Responsive Contact.css*/
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     .email-section button {
         display: none;
@@ -683,7 +683,7 @@ img, svg {
 }
 
 /* Responsive Home.css */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .gridHomeImg {
         display: none;
     }
@@ -861,7 +861,7 @@ ul {
 
 /*Responsive Projects.css and CardProject.css*/
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .project-list {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -1079,7 +1079,7 @@ h4 {
     padding: 3px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .meWelcome {
         position: absolute;
         top: 50px;
