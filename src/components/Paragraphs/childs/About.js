@@ -10,23 +10,19 @@ const About = () => {
 
 
     const move = useCallback((elem, labelElem, proficiency) => {
-        let i = 0;
-        if (i === 0) {
-            i = 1;
-            let width = 0;
-            let id = setInterval(frame, 10);
+        let width = 0;
 
-            function frame() {
-                if (width >= proficiency) {
-                    clearInterval(id);
-                    i = 0;
-                } else {
-                    width++;
-                    elem.style.width = width + "%";
-                    labelElem.innerText = width + "%";
-                }
+        function frame() {
+            if (width >= proficiency) {
+                return;
             }
+            width++;
+            elem.style.width = width + "%";
+            labelElem.innerText = width + "%";
+            requestAnimationFrame(frame);
         }
+
+        frame();
     }, []);
 
     useEffect(() => {
