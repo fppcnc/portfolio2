@@ -23,7 +23,7 @@ export const projectsData = [
             "dynamic-storage"]
     },
     {
-        link: "B",
+        link: "https://companymanagementapplication.000webhostapp.com/",
         img: "/assets/projectsPreview/portfolio.png",
         title: "Portfolio",
         technologies: ["JavaScript", "React", "CSS"],
