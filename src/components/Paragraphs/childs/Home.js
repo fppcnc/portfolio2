@@ -48,7 +48,7 @@ const Home = () => {
                 <p>Hey Yo! I'm Filippo, a passionate Web Developer. With a background in culinary arts and a knack for
                     crafting the perfect pizza, I've ventured into the world of web development to create digital
                     experiences that are just as satisfying.</p>
-                <p>"My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of growth. From
+                <p>My quest for excellence led me to Berlin, Germany, where I embarked on a new chapter of growth. From
                     my days as a head chef I began my Umschulung as FIAE. This transformative journey marked a shift
                     from the world of gastronomy to the realm of coding. As I continue this educational path, my passion
                     for learning remains as fresh as the ingredients I decide to use when I cook.</p>
