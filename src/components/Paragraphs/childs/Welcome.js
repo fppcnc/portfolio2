@@ -15,7 +15,7 @@ import symfonyImage from '../../../assets/technologyLogos/symfony.png';
 import typescriptImage from '../../../assets/technologyLogos/typescript.png';
 import xamppImage from '../../../assets/technologyLogos/xampp.png';
 import yarnImage from '../../../assets/technologyLogos/yarn.png';
-
+import Me from "../../Me";
 const Welcome = () => {
     const images = [
         css3Image, gitImage, gitHubImage, html5Image, javascriptImage, laravelImage, mysqlImage,
@@ -25,8 +25,11 @@ const Welcome = () => {
 
     return (
         <>
+            <div className="meWelcome">
+                <Me />
+            </div>
             <h1>Hello!</h1>
-            <h2>I am Filippo</h2>
+            <h2>I am Filippo Concato</h2>
             <h4>a Student</h4>
             <h4>a Web Designer</h4>
             <div className="wave wave1"></div>

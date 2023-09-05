@@ -1,7 +1,7 @@
 import React from "react";
 import MenuItems from "./childs/MenuItems";
 import Socials from "./childs/Socials";
-import Me from "./childs/Me";
+import Me from "../Me";
 
 const Navbar = (props) => {
 

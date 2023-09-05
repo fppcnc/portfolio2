@@ -478,6 +478,7 @@ img, svg {
     .myProgress {
         width: 95%;
     }
+
     .spanWrapper {
         font-size: 0.8rem;
     }
@@ -633,6 +634,7 @@ img, svg {
         width: 32px; /* reduce icon size */
         height: 32px;
     }
+
     .socials-section a p {
         display: none;
     }
@@ -641,7 +643,6 @@ img, svg {
         padding: 10px;
     }
 }
-
 
 
 /*Home.css*/
@@ -699,6 +700,7 @@ img, svg {
         /*padding: 10px;*/
     }
 }
+
 /*Project.css & CardsProject.css*/
 .projects {
     width: 100%;
@@ -906,7 +908,7 @@ ul {
         gap: 15px;
     }
 
-.tag {
+    .tag {
         font-size: 0.5rem;
         padding: 5px 5px;
     }
@@ -942,6 +944,11 @@ ul {
     100% {
         transform: translateX(0);
     }
+}
+
+.meWelcome {
+    display: none;
+
 }
 
 .paragraphwelcome .slider {
@@ -1072,6 +1079,24 @@ h4 {
     padding: 3px;
 }
 
+@media (max-width: 768px) {
+    .meWelcome {
+        position: absolute;
+        top: 50px;
+        display: block;
+        z-index: 100;
+    }
+
+    .meWelcome .mypic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .meWelcome h3,.meWelcome h1 {
+        display: none;
+    }
+
+}
 
 
 
