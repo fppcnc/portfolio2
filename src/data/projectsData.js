@@ -1,6 +1,6 @@
 export const projectsData = [
     {
-        link: "https://concatofilippo.com/",
+        link: "https://companymanagementapplication.000webhostapp.com/",
         img: "/assets/projectsPreview/company.png",
         title: "Employee Management System",
         technologies: ["PHP", "CSS"],
@@ -23,7 +23,7 @@ export const projectsData = [
             "dynamic-storage"]
     },
     {
-        link: "https://companymanagementapplication.000webhostapp.com/",
+        link: "https://concatofilippo.com/",
         img: "/assets/projectsPreview/portfolio.png",
         title: "Portfolio",
         technologies: ["JavaScript", "React", "CSS"],
