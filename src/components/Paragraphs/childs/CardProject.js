@@ -2,7 +2,7 @@ import React,  { useState } from "react";
 import {ReactComponent as GitHub} from "../../../assets/github.svg";
 const CardProject = ({ projectData: { link, img, title, technologies, gitHub, description, tags } }) => {
 
-    const [isExpanded, setIsExpanded] = useState(false);  // State to manage card expansion
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleExpansion = () => {
         setIsExpanded(!isExpanded);
@@ -22,9 +22,11 @@ const CardProject = ({ projectData: { link, img, title, technologies, gitHub, de
                         <img src={img} className="project-img" alt={title} loading="lazy"/>
                     </a>
                     <div className="project-buttons">
+                        {link && (
                         <a href={link} target="_blank" rel="noopener noreferrer">
                             Preview Project
                         </a>
+                        )}
                         <a href={gitHub} target="_blank" rel="noopener noreferrer">
                             <GitHub className="socialImg"/> GitHub
                         </a>
