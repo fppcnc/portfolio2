@@ -3,9 +3,14 @@ import {ReactComponent as GitHub} from "../../../assets/github.svg";
 const CardProject = ({ projectData: { link, img, title, technologies, gitHub, description, tags } }) => {
 
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const toggleExpansion = () => {
         setIsExpanded(!isExpanded);
+    }
+
+    const handleImageLoad = () => {
+        setIsLoading(false);
     }
 
     return (
@@ -19,7 +24,17 @@ const CardProject = ({ projectData: { link, img, title, technologies, gitHub, de
             {isExpanded && (
                 <div className="project-content">
                     <a href={link} target="_blank" rel="noopener noreferrer" className="project-img-container">
-                        <img src={img} className="project-img" alt={title} loading="lazy"/>
+                        {isLoading ? (
+                            <span>Loading...</span>
+                        ) : (
+                            <img
+                                src={img}
+                                className="project-img"
+                                alt={title}
+                                loading="lazy"
+                                onLoad={handleImageLoad}  // Add the onLoad event handler
+                            />
+                        )}
                     </a>
                     <div className="project-buttons">
                         {link && (
