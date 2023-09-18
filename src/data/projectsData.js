@@ -67,4 +67,31 @@ export const projectsData = [
         "interactive-ui",
         ]
     },
+    {
+        link: "https://fppcnc.github.io/quote-of-the-day/",
+        img: "/assets/projectsPreview/quoteOfTheDay.png",
+        title: "Quote of the Day",
+        technologies: ["TailwindCSS", "React", "API"],
+        gitHub: "https://github.com/fppcnc/quote-of-the-day/",
+        description: "Dive into a world of daily inspiration with the Quote of the Day web application. This beautifully designed platform offers users a unique blend of wisdom and aesthetics, providing a daily dose of motivational quotes set against dynamically sourced backgrounds tailored to each quote's author. Built using React and styled with the versatile TailwindCSS, the app showcases a minimalist yet captivating design. A standout feature is its seamless integration with the Unsplash API, which fetches a relevant background image based on the quote's author, adding depth and context to each piece of wisdom presented. But the experience doesn't end with the day's quote. Users can actively fetch a new quote on-demand, ensuring a fresh perspective with every click. Whether seeking motivation, wisdom, or simply a visual treat, the Quote of the Day app is a testament to the power of words and the beauty of web design.",
+        tags: [
+            "react",
+            "tailwindcss",
+            "unsplash-api",
+            "web-development",
+            "interactive-ui",
+            "daily-inspiration",
+            "dynamic-backgrounds",
+            "frontend",
+            "javascript",
+            "css",
+            "api-integration",
+            "random-quote",
+            "responsive-design",
+            "modern-ui",
+            "state-management",
+            "environment-variables",
+            "project-showcase"
+        ]
+    },
 ]
