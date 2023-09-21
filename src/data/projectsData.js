@@ -51,7 +51,7 @@ export const projectsData = [
         img: "/assets/projectsPreview/parkVence.png",
         title: "Parking System",
         technologies: ["Java", "JavaSwing"],
-        gitHub: "https://github.com/fppcnc/portfolio2",
+        gitHub: "https://github.com/fppcnc/parkVence",
         description: "A parking management system meticulously designed in Java. It allows users to establish both static and dynamic parking garages, seamlessly manage vehicle parking, and offers a dynamic search functionality for vehicles. The intuitive user interface is crafted using Java's Swing, ensuring a smooth user experience. Whether you're aiming to establish multi-level parking or different vehicle types, ParkVence caters to all with precision and ease.",
         tags: ["java",
         "javaswing",

@@ -52,7 +52,7 @@ const Contact = () => {
                 <div>
                     <a href="https://paypal.me/fppcnc?country.x=DE&locale.x=en_US" target="_blank"
                        rel="noopener noreferrer"><PayPalLogo/><p>paypal.me</p></a>
-                    <a href="https://github.com/fppcnc" target="_blank" rel="noopener noreferrer"><GitHubSponsorLogo/>
+                    <a href="https://github.com/sponsors/fppcnc" target="_blank" rel="noopener noreferrer"><GitHubSponsorLogo/>
                         <p>GitHub Sponsor</p></a>
                 </div>
                 <p className="support-introduction">Every little bit you chip in goes a long way. It's not
