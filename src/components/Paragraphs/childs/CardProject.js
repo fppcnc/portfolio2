@@ -38,7 +38,15 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                         <p className="project-description">{description}</p>
                         <div className="project-tags">
                             {tags.map((tag, index) => (
-                                <span key={index} className="tag">{tag}</span>
+                                <a
+                                    key={index}
+                                    className="tag"
+                                    href={`https://www.google.com/search?q=${tag}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {tag}
+                                </a>
                             ))}
                         </div>
                     </div>

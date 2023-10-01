@@ -573,7 +573,6 @@ ul {
 
 .project-card {
     position: relative;
-    /*flex-direction: row;*/
     justify-content: space-between;
     display: grid;
     width: 100%;
@@ -827,6 +826,13 @@ img.project-img-expanded {
     padding: 2px 5px;
     font-size: 0.7rem;
     color: #555;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.project-modal .tag:hover {
+    background-color: #d0d0d0;
+    cursor: pointer;
 }
 
 
