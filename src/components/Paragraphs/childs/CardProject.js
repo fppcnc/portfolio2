@@ -16,7 +16,7 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                     <div className="project-content">
                         <div className="project-img-wrapper">
                         <a href={link} target="_blank" rel="noopener noreferrer" className="project-img-container">
-                            {!isImageLoaded && <span>Loading...</span>}
+                            {!isImageLoaded && <div className="spinner"></div>}
                             <img
                                 src={img}
                                 className="project-img-expanded"
