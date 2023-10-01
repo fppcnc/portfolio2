@@ -48,9 +48,15 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                 <div className="project-card">
                     <h3 className="project-title">{title}</h3>
                     <p className="project-development">{technologies.join(" | ")}</p>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img src={img} className="project-img" alt={title} loading="lazy" />
-                </a>
+                    <img
+                        src={img}
+                        className="project-img"
+                        style={{cursor:"pointer"}}
+                        alt={title}
+                        loading="lazy"
+                        onClick={onToggleExpansion}
+                    />
+
                     <div className="project-buttons">
 
                         <a href={gitHub} target="_blank" rel="noopener noreferrer">

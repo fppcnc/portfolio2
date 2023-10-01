@@ -595,6 +595,15 @@ img.project-img-expanded {
     border-radius: 8px;
 }
 
+.project-title, .project-development {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .project-card p.project-description {
     margin-top: 10px;
     font-size: 16px;
@@ -640,8 +649,8 @@ img.project-img-expanded {
 
 .expand-button {
     position: absolute;
-    top: 30px;
-    right: 15px;
+    top: 20px;
+    right: 5px;
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
@@ -1190,7 +1199,6 @@ h4 {
         flex: 0 0 100%;
     }
 
-    .project-card div
 
     .tag {
         font-size: 0.5rem;
