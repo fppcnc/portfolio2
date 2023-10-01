@@ -10,7 +10,7 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
     return (
         <>
             {isExpanded ? (
-                <div className="project-modal">
+                <div className="project-modal"  onClick={(e) => e.stopPropagation()}>
                     <h3 className="project-title">{title}</h3>
                     <p className="project-development">{technologies.join(" | ")}</p>
                     <div className="project-content">

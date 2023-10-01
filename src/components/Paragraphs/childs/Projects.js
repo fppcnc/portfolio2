@@ -10,9 +10,14 @@ const Projects = () => {
         );
     };
 
+    const handleBackdropClick = () => {
+        setExpandedProjectIndex(null);
+    };
+
     return (
         <>
-            {expandedProjectIndex !== null && <div className="project-backdrop"></div>}
+            {expandedProjectIndex !== null && <div className="project-backdrop" onClick={handleBackdropClick}></div>}
+
 
             <div className="projects" data-page="projects">
                 <ul className="project-list">

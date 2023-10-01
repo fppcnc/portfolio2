@@ -818,6 +818,7 @@ img.project-img-expanded {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    justify-items: center;
 }
 
 .project-modal .tag {
