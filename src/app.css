@@ -248,7 +248,6 @@ img, svg {
 }
 
 
-
 /*Paragraphs.css*/
 
 
@@ -313,7 +312,6 @@ img, svg {
 }
 
 
-
 /*About.css*/
 
 .gridAbout {
@@ -370,7 +368,6 @@ img, svg {
     transition: width 0.5s;
     border-right: 1px solid black;
 }
-
 
 
 /*Contact.css*/
@@ -547,13 +544,14 @@ img, svg {
 
 
 /*Project.css & CardsProject.css*/
+
 .projects {
     width: 100%;
 }
 
 .project-list {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 10px;
 }
@@ -588,10 +586,13 @@ ul {
 }
 
 .project-card img.project-img {
-    width: 90%;
+    width: 100%;
     border-radius: 8px;
-    margin-top: 15px;
-    margin-left: auto;
+}
+
+img.project-img-expanded {
+    width: 100%;
+    border-radius: 8px;
 }
 
 .project-card p.project-description {
@@ -617,9 +618,11 @@ ul {
 .project-card div.project-buttons {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 70px;
+    gap: 10px;
     flex-wrap: wrap;
+    padding-top: 10px;
 }
 
 .project-card div.project-buttons a {
@@ -630,6 +633,7 @@ ul {
     border-radius: 5px;
     background-color: #27ae60;
 }
+
 .project-card div.project-buttons a:hover {
     background-color: #7ab887;
 }
@@ -650,57 +654,148 @@ ul {
     box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
 
 }
+
 .expand-button:hover {
     background-color: #7ab887;
 }
 
-.expand-button:before {
+.project-card .expand-button:before,
+.project-card .expand-button:after {
     content: "";
     position: absolute;
+    /*height: 3px;*/
+    transform-origin: center;
+    border: solid white ;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding:3px;
+}
+
+.project-card .expand-button:before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    top: 40%;
+    left: 60%;
+
+}
+
+.project-card .expand-button:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 60%;
+    left: 40%;
+
+}
+
+.project-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 150;
+}
+
+/*modal for when it´s expanded*/
+
+.project-modal {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
+    width: 80%;
+    max-width: 1200px;
+    max-height: 90vh;
+    background: #b8877a;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 200;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
 }
 
-.expand-button:not([data-expanded="true"]):before {
-    border-top: 8px solid white;
+.project-modal .project-img-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.expand-button[data-expanded="true"]:before {
-    border-bottom: 8px solid white;
+.project-modal .project-img-container {
+    flex-basis: 69%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
 }
 
-.project-content {
+
+.project-modal .project-buttons {
+    flex-basis: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-modal .project-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #27ae60;
+}
+
+.project-modal .project-buttons a:hover {
+    background-color: #7ab887;
+}
+
+
+.project-modal .expand-button:before,
+.project-modal .expand-button:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 3px;
+    transform-origin: center;
+}
+
+.project-modal .expand-button:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.project-modal .expand-button:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.project-modal .project-content {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 20px;
 }
 
-.project-img-container {
-    flex: 0 0 45%;
+.project-modal .project-description {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: justify;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    flex-basis: 100%;
 }
 
-.project-buttons {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-self: center;
-}
-
-
-.project-tags {
+.project-modal .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
-.tag {
+.project-modal .tag {
     background-color: #e0e0e0;
     border-radius: 3px;
     padding: 2px 5px;
@@ -875,10 +970,11 @@ h4 {
 }
 
 
-
 /* General responsive adjustments for images and SVGs */
 
 @media (max-width: 800px) {
+
+
     img.large, svg.large {
         width: 90%;
     }
@@ -894,8 +990,6 @@ h4 {
 
     /* Responsive Navbar */
     /* Navbar Collapses for Small Screens */
-
-
     .containerNavbar {
         display: none;
     }
@@ -929,7 +1023,6 @@ h4 {
 
 
     /* Responsive Paragraphs */
-
     .containerParagraphs {
         padding: 20px;
         max-width: 100%;
@@ -971,7 +1064,6 @@ h4 {
 
 
     /*Responsive About.css*/
-
     p {
         font-size: 0.8rem;
     }
@@ -991,8 +1083,6 @@ h4 {
 
 
     /*Responsive Contact.css*/
-
-
     .email-section button {
         display: none;
     }
@@ -1021,7 +1111,6 @@ h4 {
 
 
     /* Responsive Home.css */
-
     .gridHomeImg {
         display: none;
     }
@@ -1040,7 +1129,6 @@ h4 {
 
 
     /*Responsive Projects.css and CardProject.css*/
-
     .project-list {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -1048,6 +1136,29 @@ h4 {
 
     .project-card {
         padding: 15px;
+    }
+
+    .project-card h3.project-title {
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+
+    .project-modal .project-img-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-modal .project-description {
+        margin-top: 10px;
+        font-size: 16px;
+        text-align: justify;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        flex-basis: 100%;
     }
 
     .project-card img.project-img {
@@ -1061,7 +1172,7 @@ h4 {
     }
 
     .project-card div.project-buttons {
-        padding: 0 50px;
+        padding: 10px 50px;
     }
 
     .expand-button {
@@ -1079,13 +1190,7 @@ h4 {
         flex: 0 0 100%;
     }
 
-    .project-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 15px;
-    }
+    .project-card div
 
     .tag {
         font-size: 0.5rem;
@@ -1094,7 +1199,6 @@ h4 {
 
 
     /*Img in Welcome paragraph when navbar is collapsed*/
-
     .meWelcome {
         position: absolute;
         top: 50px;
@@ -1107,14 +1211,16 @@ h4 {
         height: 150px;
     }
 
-    .meWelcome h3,.meWelcome h1 {
+    .meWelcome h3, .meWelcome h1 {
         display: none;
     }
 
 }
+
+
 /* General responsive adjustments for images and SVGs */
 
-@media (min-width: 801px) and (max-width:1680px) {
+@media (min-width: 801px) and (max-width: 1680px) {
 
     /* General responsive adjustments for images and SVGs */
     img, svg {
@@ -1143,7 +1249,7 @@ h4 {
 
     .containerNavbar .navbar h1 {
         font-size: calc(0.8rem + var(--container-width) / 20);
-        padding:10px 0;
+        padding: 10px 0;
         transition: all 0.3s ease;
         transition-duration: 1s;
     }
@@ -1195,7 +1301,6 @@ h4 {
     }
 
 
-
     /*About.css*/
     .gridAbout {
         gap: 20px;
@@ -1203,14 +1308,13 @@ h4 {
 
 
     /*Project.css & CardsProject.css*/
-
     .project-card img.project-img {
         width: 100%;
         margin-top: 0;
     }
 
     .project-img-container {
-        width:100%;
+        width: 100%;
         flex: 0 0 100%;
     }
 
@@ -1225,11 +1329,12 @@ h4 {
 
 @media (min-width: 1280px) and (max-width: 1680px) {
     .mypic {
-        height:30%;
+        height: 30%;
         width: 80%;
     }
+
     .containerNavbar:hover .mypic {
-        height:50%;
+        height: 50%;
         width: 80%;
     }
 }
