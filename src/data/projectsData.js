@@ -9,18 +9,18 @@ export const projectsData = [
         tags: ["php",
             "vanilla php",
             "employee-management",
+            "crud",
             "crud-operations",
             "database",
             "file-storage",
-            "department-management",
-            "autoload",
             "web-application",
             "backend",
             "data-persistence",
             "object-oriented-programming",
             "hr-system",
             "hr-management",
-            "dynamic-storage"]
+            "php-storm"
+        ]
     },
     {
         link: "https://concatofilippo.com/",
@@ -33,18 +33,11 @@ export const projectsData = [
         "javascript",
         "responsive-design",
         "web-development",
-        "interactive-ui",
-        "personal-portfolio",
-        "project-showcase",
-        "professional-journey",
         "frontend",
         "css",
         "development-tools",
-        "contact-form",
-        "animations",
-        "documentation",
-        "github-integration",
-        "coding-portfolio"]
+        "github",
+        "php-storm"]
     },
     {
         link: "https://fppcnc.github.io/quote-of-the-day/",
@@ -56,21 +49,18 @@ export const projectsData = [
         tags: [
             "react",
             "tailwindcss",
-            "unsplash-api",
+            "unsplash",
+            "api",
+            "api-integration",
             "web-development",
-            "interactive-ui",
             "daily-inspiration",
-            "dynamic-backgrounds",
             "frontend",
             "javascript",
             "css",
-            "api-integration",
             "random-quote",
             "responsive-design",
-            "modern-ui",
-            "state-management",
             "environment-variables",
-            "project-showcase"
+            "php-storm"
         ]
     },{
         link: null,
@@ -81,7 +71,6 @@ export const projectsData = [
         description: "A parking management system meticulously designed in Java. It allows users to establish both static and dynamic parking garages, seamlessly manage vehicle parking, and offers a dynamic search functionality for vehicles. The intuitive user interface is crafted using Java's Swing, ensuring a smooth user experience. Whether you're aiming to establish multi-level parking or different vehicle types, ParkVence caters to all with precision and ease.",
         tags: ["java",
             "javaswing",
-            "swing",
             "unit testing",
             "junit",
             "crud",
@@ -90,7 +79,6 @@ export const projectsData = [
             "intellij",
             "documentation",
             "planning",
-            "interactive-ui",
         ]
     },
 
