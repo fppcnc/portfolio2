@@ -501,6 +501,10 @@ img, svg {
     line-height: 1.4;
 }
 
+.copyLogoButton {
+    margin: 0 0 0 5px;
+
+}
 
 
 /*Home.css*/
@@ -678,9 +682,6 @@ ul {
 }
 
 .project-img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex: 0 0 45%;
 }
 

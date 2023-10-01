@@ -32,7 +32,7 @@ const Contact = () => {
             <div className="email-section">
                 {showFeedback ? <p>Email copied to clipboard!</p> :
                     <p>{mailTo()}</p>}
-                <button onClick={copyEmailToClipboard}><CopyLogo/></button>
+                <button onClick={copyEmailToClipboard} className="copyLogoButton"><CopyLogo/></button>
             </div>
             <label>Socials</label>
             <div className="socials-section">
