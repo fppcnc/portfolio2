@@ -588,6 +588,7 @@ ul {
 .project-card img.project-img {
     width: 100%;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 img.project-img-expanded {

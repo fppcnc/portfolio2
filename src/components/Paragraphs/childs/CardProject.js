@@ -46,25 +46,28 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                 </div>
             ) : (
                 <div className="project-card">
-                    <h3 className="project-title">{title}</h3>
-                    <p className="project-development">{technologies.join(" | ")}</p>
-                    <img
-                        src={img}
-                        className="project-img"
-                        style={{cursor:"pointer"}}
-                        alt={title}
-                        loading="lazy"
-                        onClick={onToggleExpansion}
-                    />
-
-                    <div className="project-buttons">
-
-                        <a href={gitHub} target="_blank" rel="noopener noreferrer">
-                            <GitHub className="socialImg"/> GitHub
-                        </a>
-                        {link && (
-                            <a href={link} target="_blank" rel="noopener noreferrer">Preview Project</a>
-                        )}
+                    <div className="project-header">
+                        <h3 className="project-title">{title}</h3>
+                        <p className="project-development">{technologies.join(" | ")}</p>
+                    </div>
+                    <div className="project-image-wrapper">
+                        <img
+                            src={img}
+                            className="project-img"
+                            alt={title}
+                            loading="lazy"
+                            onClick={onToggleExpansion}
+                        />
+                    </div>
+                    <div className="project-footer">
+                        <div className="project-buttons">
+                            <a href={gitHub} target="_blank" rel="noopener noreferrer">
+                                <GitHub className="socialImg"/> GitHub
+                            </a>
+                            {link && (
+                                <a href={link} target="_blank" rel="noopener noreferrer">Preview Project</a>
+                            )}
+                        </div>
                     </div>
                     <button onClick={onToggleExpansion} className="expand-button"></button>
                 </div>
