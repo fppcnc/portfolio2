@@ -583,6 +583,10 @@ ul {
 }
 
 .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 8px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     border-top: 8px solid #333;
@@ -604,6 +608,7 @@ ul {
     align-self: center;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 .project-footer {

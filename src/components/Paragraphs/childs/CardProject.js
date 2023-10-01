@@ -59,12 +59,15 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                         <p className="project-development">{technologies.join(" | ")}</p>
                     </div>
                     <div className="project-image-wrapper">
+                        {!isImageLoaded && <div className="spinner"></div>}
                         <img
                             src={img}
                             className="project-img"
                             alt={title}
                             loading="lazy"
                             onClick={onToggleExpansion}
+                            onLoad={handleImageLoad}
+                            style={{ opacity: isImageLoaded ? 1 : 0 }}
                         />
                     </div>
                     <div className="project-footer">
