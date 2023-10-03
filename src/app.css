@@ -624,6 +624,12 @@ ul {
     width: 100%;
     border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card img.project-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 img.project-img-expanded {
