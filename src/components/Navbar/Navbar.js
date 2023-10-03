@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import MenuItems from "./childs/MenuItems";
 import Socials from "./childs/Socials";
 import Me from "../Me";
@@ -16,4 +16,4 @@ const Navbar = (props) => {
     )
 }
 
-export default Navbar;
+export default memo(Navbar);

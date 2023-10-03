@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from "react";
+import React, {useState,useEffect,memo} from "react";
 const MenuItems = (props) => {
 
     const [activeMenuItem, setActiveMenuItem] = useState(null);
@@ -62,4 +62,4 @@ const MenuItems = (props) => {
 };
 
 
-export default MenuItems;
+export default memo(MenuItems);

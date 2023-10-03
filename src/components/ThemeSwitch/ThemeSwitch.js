@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import Switch from "react-switch";
 
 function ThemeSwitch({ theme, toggleTheme }) {
@@ -23,4 +23,4 @@ function ThemeSwitch({ theme, toggleTheme }) {
     );
 }
 
-export default ThemeSwitch;
+export default memo(ThemeSwitch);
