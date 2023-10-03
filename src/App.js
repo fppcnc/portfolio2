@@ -1,8 +1,9 @@
-import React, { createContext, useState } from "react";
+import React, {createContext, useState} from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Paragraphs from "./components/Paragraphs/Paragraphs";
 import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
-import { sectionsData } from "./data/sectionsData.js";
+import {sectionsData} from "./data/sectionsData.js";
+import Footer from "./components/Footer";
 import "./app.css";
 
 
@@ -15,12 +16,14 @@ function App() {
     };
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <ThemeContext.Provider value={{theme, toggleTheme}}>
             <div className="App" id={theme}>
-                <ThemeSwitch theme={theme} toggleTheme={toggleTheme} />
-                <Navbar sectionsData={sectionsData} />
-                <Paragraphs sectionsData={sectionsData} />
+                <ThemeSwitch theme={theme} toggleTheme={toggleTheme}/>
+                <Navbar sectionsData={sectionsData}/>
+                <Paragraphs sectionsData={sectionsData}/>
+                <Footer />
             </div>
+
         </ThemeContext.Provider>
     );
 }

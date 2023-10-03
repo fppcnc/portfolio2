@@ -256,9 +256,8 @@ img, svg {
     max-width: 85%;
     margin-left: 15%;
     padding: 50px 80px 50px 80px;
-    height: 100vh;
+    height: 100%;
     max-height: 85%;
-    overflow-y: scroll;
 }
 
 .paragraphs {
@@ -271,7 +270,7 @@ img, svg {
 .containerParagraph {
     display: inherit;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .paragraph {
@@ -1028,6 +1027,23 @@ h4 {
 }
 
 
+/* Footer */
+
+.foot {
+    overflow-y: hidden;
+    text-align: center;
+    width: 100%;
+padding-bottom: 10px;
+}
+
+#light .foot {
+    color: #012604;
+}
+
+#dark .foot {
+    color: #fff;
+}
+
 /* General responsive adjustments for images and SVGs */
 
 @media (max-width: 800px) {
@@ -1093,8 +1109,6 @@ h4 {
 
     .containerParagraph {
         padding-top: 25px;
-        padding-bottom: 75px;
-        margin-bottom: 50px;
     }
 
 
@@ -1272,6 +1286,13 @@ h4 {
         display: none;
     }
 
+/*    Footer */
+
+    .foot {
+        font-size: 12px;
+        padding: 10px;
+    }
+
 }
 
 
@@ -1342,7 +1363,7 @@ h4 {
 
     /*Paragraphs.css*/
     .containerParagraphs {
-        padding: 50px 2% 50px 4%;
+        padding: 50px 2% inherit 4%;
     }
 
     .paragraph {
@@ -1393,5 +1414,18 @@ h4 {
     .containerNavbar:hover .mypic {
         height: 50%;
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    .foot {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .foot {
+        font-size: 16px;
     }
 }

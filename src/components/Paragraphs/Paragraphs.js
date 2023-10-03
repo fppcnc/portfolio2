@@ -1,4 +1,5 @@
 import React, { useRef, memo } from "react";
+import Footer from "../Footer";
 
 const Paragraphs = (props) => {
     const ref = useRef(null);
