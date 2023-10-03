@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 
 const Paragraphs = (props) => {
     const ref = useRef(null);
@@ -20,4 +20,4 @@ const Paragraphs = (props) => {
     );
 };
 
-export default Paragraphs;
+export default memo(Paragraphs);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {ReactComponent as GitHub} from "../../../assets/github.svg";
 const CardProject = ({ projectData: { link, img, title, description, tags, technologies, gitHub }, isExpanded, onToggleExpansion }) => {
     const [isImageLoaded, setImageLoaded] = React.useState(false);
@@ -87,6 +87,6 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
     );
 };
 
-export default CardProject;
+export default memo(CardProject);
 
 

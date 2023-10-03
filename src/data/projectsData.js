@@ -37,7 +37,8 @@ export const projectsData = [
         "css",
         "development-tools",
         "github",
-        "php-storm"]
+        "php-storm",
+        "react-memo"]
     },
     {
         link: "https://fppcnc.github.io/quote-of-the-day/",
