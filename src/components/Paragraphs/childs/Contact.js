@@ -30,9 +30,11 @@ const Contact = () => {
         <div className="contact">
             <label>Email</label>
             <div className="email-section">
-                {showFeedback ? <p>Email copied to clipboard!</p> :
+                <div className="email-container">
+                    {showFeedback ? <p className="feedback">Email copied to clipboard!</p> :
                     <p>{mailTo()}</p>}
                 <button onClick={copyEmailToClipboard} className="copyLogoButton"><CopyLogo/></button>
+            </div>
             </div>
             <label>Socials</label>
             <div className="socials-section">
