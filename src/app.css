@@ -501,7 +501,18 @@ img, svg {
     margin: 0 0 0 5px;
 
 }
+.socials-section a p, .support-section a p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+}
 
+
+.socials-section a:hover p, .support-section a:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /*Home.css*/
 
