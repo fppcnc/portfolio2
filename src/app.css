@@ -497,6 +497,7 @@ img, svg {
     background-color: rgb(30, 48, 80);
 }
 
+
 .email-section .feedback::after {
     animation: fadeOutRight 3s forwards;
 }
