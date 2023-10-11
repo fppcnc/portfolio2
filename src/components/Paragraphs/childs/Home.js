@@ -5,14 +5,16 @@ import {ReactComponent as LocationImg} from "../../../assets/location-dot-solid.
 import {ReactComponent as EmailImg} from "../../../assets/envelope-solid.svg";
 
 const Home = () => {
-
-    const getDate = () => {
-        let dob = new Date("10/04/1994");
-        let month_diff = Date.now() - dob.getTime();
-        let age_dt = new Date(month_diff);
-        let year = age_dt.getUTCFullYear();
-        return Math.abs(year - 1969);
-
+    const dob = new Date("10/04/1994");
+    const getAge = (dob) => {
+        let today = new Date();
+        let birthDate = new Date(dob);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let month = today.getMonth() - birthDate.getMonth();
+        if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
     }
 
     const email = 'concatofilippo94@gmail.com';
@@ -25,7 +27,7 @@ const Home = () => {
     const gridContent = [
         {label: 'Location', content: 'Berlin, Germany', img: <LocationImg className="gridHomeImg"/>},
         {label: 'Occupation', content: 'FIAE Student at BBQ Berlin', img: <OccupationImg className="gridHomeImg"/>},
-        {label: 'Age', content: getDate() + ' years old', img: <AgeImg className="gridHomeImg"/>},
+        {label: 'Age', content: getAge(dob) + ' years old', img: <AgeImg className="gridHomeImg"/>},
         {label: 'Email', content: mailTo(), img: <EmailImg className="gridHomeImg"/>},
     ];
 
