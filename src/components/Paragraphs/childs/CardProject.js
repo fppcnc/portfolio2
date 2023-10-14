@@ -80,7 +80,7 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                             )}
                         </div>
                     </div>
-                    <button onClick={onToggleExpansion} className="expand-button"></button>
+                    {/*<button onClick={onToggleExpansion} className="expand-button"></button>*/}
                 </div>
             )}
         </>
