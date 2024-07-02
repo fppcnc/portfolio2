@@ -5,7 +5,7 @@ import {ReactComponent as LocationImg} from "../../../assets/location-dot-solid.
 import {ReactComponent as EmailImg} from "../../../assets/envelope-solid.svg";
 
 const Home = () => {
-    const dob = new Date("10/04/1994");
+    const dob = new Date("04/10/1994");
     const getAge = (dob) => {
         let today = new Date();
         let birthDate = new Date(dob);
@@ -26,7 +26,7 @@ const Home = () => {
 
     const gridContent = [
         {label: 'Location', content: 'Berlin, Germany', img: <LocationImg className="gridHomeImg"/>},
-        {label: 'Occupation', content: 'FIAE Student at BBQ Berlin', img: <OccupationImg className="gridHomeImg"/>},
+        {label: 'Occupation', content: 'Application Developer', img: <OccupationImg className="gridHomeImg"/>},
         {label: 'Age', content: getAge(dob) + ' years old', img: <AgeImg className="gridHomeImg"/>},
         {label: 'Email', content: mailTo(), img: <EmailImg className="gridHomeImg"/>},
     ];
