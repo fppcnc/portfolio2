@@ -37,6 +37,10 @@
     color: white;
 }
 
+.paragraph .justifiedText {
+    text-align: center;
+}
+
 /* General responsive adjustments for images and SVGs */
 
 img, svg {
@@ -298,7 +302,7 @@ img, svg {
 }
 
 .containerParagraph:nth-child(odd) .paragraph p, .containerParagraph:nth-child(even) .paragraph p {
-    text-align: justify;
+
     padding: 5px 0;
 }
 
