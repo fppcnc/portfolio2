@@ -63,7 +63,26 @@ export const projectsData = [
             "environment-variables",
             "php-storm"
         ]
-    },,
+    },
+    {
+        link: null,
+        img: "/assets/projectsPreview/parkVence.png",
+        title: "Parking System",
+        technologies: ["Java", "JavaSwing"],
+        gitHub: "https://github.com/fppcnc/parkVence",
+        description: "A parking management system meticulously designed in Java. It allows users to establish both static and dynamic parking garages, seamlessly manage vehicle parking, and offers a dynamic search functionality for vehicles. The intuitive user interface is crafted using Java's Swing, ensuring a smooth user experience. Whether you're aiming to establish multi-level parking or different vehicle types, ParkVence caters to all with precision and ease.",
+        tags: ["java",
+            "javaswing",
+            "unit testing",
+            "junit",
+            "crud",
+            "constructor overloading",
+            "fun",
+            "intellij",
+            "documentation",
+            "planning",
+        ]
+    },
 
 ]
 
@@ -71,22 +90,3 @@ export const projectsData = [
 
 
 // projects that can be added
-// {
-//     link: null,
-//         img: "/assets/projectsPreview/parkVence.png",
-//     title: "Parking System",
-//     technologies: ["Java", "JavaSwing"],
-//     gitHub: "https://github.com/fppcnc/parkVence",
-//     description: "A parking management system meticulously designed in Java. It allows users to establish both static and dynamic parking garages, seamlessly manage vehicle parking, and offers a dynamic search functionality for vehicles. The intuitive user interface is crafted using Java's Swing, ensuring a smooth user experience. Whether you're aiming to establish multi-level parking or different vehicle types, ParkVence caters to all with precision and ease.",
-//     tags: ["java",
-//     "javaswing",
-//     "unit testing",
-//     "junit",
-//     "crud",
-//     "constructor overloading",
-//     "fun",
-//     "intellij",
-//     "documentation",
-//     "planning",
-// ]
-// }
