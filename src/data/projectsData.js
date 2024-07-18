@@ -83,7 +83,29 @@ export const projectsData = [
             "planning",
         ]
     },
-
+    {
+        link: "https://fppcnc.github.io/weatherro/",
+        img: "/assets/projectsPreview/weatherro.png",
+        title: "Weatherro",
+        technologies: ["React", "API", "CSS"],
+        gitHub: "https://github.com/fppcnc/weatherro",
+        description: "Weatherro provides up-to-date weather information for any city you search for. Designed with a modern interface using React, it dynamically fetches weather data from OpenWeatherMap and displays relevant background images using the Pexels API. The app offers a user-friendly experience with real-time weather data, dynamic background images based on current weather conditions, and a responsive design that works on all devices.",
+        tags: [
+            "react",
+            "openweathermap",
+            "pexels",
+            "api",
+            "api-integration",
+            "web-development",
+            "frontend",
+            "javascript",
+            "css",
+            "responsive-design",
+            "environment-variables",
+            "php-storm",
+            "responsive-design",
+        ]
+    },
 ]
 
 
