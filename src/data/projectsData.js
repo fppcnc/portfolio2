@@ -1,6 +1,6 @@
 export const projectsData = [
     {
-        link: "https://companymanagementapplication.000webhostapp.com/",
+        link: null,
         img: "/assets/projectsPreview/company.png",
         title: "Employee Management System",
         technologies: ["PHP", "CSS"],
