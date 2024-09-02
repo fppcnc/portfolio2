@@ -7,6 +7,21 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
         setImageLoaded(true);
     };
 
+    const handleGitHubClick = () => {
+        window.gtag('event', 'click', {
+            'event_category': 'Project',
+            'event_label': `${title} - GitHub`,
+            'value': 1
+        });
+    };
+
+    const handlePreviewClick = () => {
+        window.gtag('event', 'click', {
+            'event_category': 'Project',
+            'event_label': `${title} - Preview Project`,
+            'value': 1
+        });
+    };
     return (
         <>
             {isExpanded ? (
@@ -28,9 +43,11 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                         </a>
                         <div className="project-buttons">
                             {link && (
-                                <a href={link} target="_blank" rel="noopener noreferrer">Preview Project</a>
+                                <a href={link} target="_blank" rel="noopener noreferrer" onClick={handlePreviewClick}>
+                                    Preview Project
+                                </a>
                             )}
-                            <a href={gitHub} target="_blank" rel="noopener noreferrer">
+                            <a href={gitHub} target="_blank" rel="noopener noreferrer" onClick={handleGitHubClick}>
                                 <GitHub className="socialImg"/> GitHub
                             </a>
                         </div>
@@ -72,11 +89,13 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
                     </div>
                     <div className="project-footer">
                         <div className="project-buttons">
-                            <a href={gitHub} target="_blank" rel="noopener noreferrer">
+                            <a href={gitHub} target="_blank" rel="noopener noreferrer" onClick={handleGitHubClick}>
                                 <GitHub className="socialImg"/> GitHub
                             </a>
                             {link && (
-                                <a href={link} target="_blank" rel="noopener noreferrer">Preview Project</a>
+                                <a href={link} target="_blank" rel="noopener noreferrer" onClick={handlePreviewClick}>
+                                    Preview Project
+                                </a>
                             )}
                         </div>
                     </div>
