@@ -1,3 +1,4 @@
+/* global gtag */
 import React, { memo } from "react";
 import {ReactComponent as GitHub} from "../../../assets/github.svg";
 const CardProject = ({ projectData: { link, img, title, description, tags, technologies, gitHub }, isExpanded, onToggleExpansion }) => {
@@ -8,19 +9,27 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
     };
 
     const handleGitHubClick = () => {
-        window.gtag('event', 'click', {
-            'event_category': 'Project',
-            'event_label': `${title} - GitHub`,
-            'value': 1
-        });
+        if (typeof gtag === 'function') {
+            gtag('event', 'click', {
+                'event_category': 'Project',
+                'event_label': `${title} - GitHub`,
+                'value': 1
+            });
+        } else {
+            console.warn('Google Analytics is not loaded yet.');
+        }
     };
 
     const handlePreviewClick = () => {
-        window.gtag('event', 'click', {
-            'event_category': 'Project',
-            'event_label': `${title} - Preview Project`,
-            'value': 1
-        });
+        if (typeof gtag === 'function') {
+            gtag('event', 'click', {
+                'event_category': 'Project',
+                'event_label': `${title} - Preview Project`,
+                'value': 1
+            });
+        } else {
+            console.warn('Google Analytics is not loaded yet.');
+        }
     };
     return (
         <>
