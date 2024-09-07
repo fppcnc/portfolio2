@@ -12,7 +12,7 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
         if (typeof gtag === 'function') {
             gtag('event', 'click', {
                 'event_category': 'Project',
-                'fc_event_label': `${title} - GitHub`,
+                'event_label': `${title} - GitHub`,
                 'value': 1
             });
         } else {
@@ -24,7 +24,7 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
         if (typeof gtag === 'function') {
             gtag('event', 'click', {
                 'event_category': 'Project',
-                'fc_event_label': `${title} - Preview Project`,
+                'event_label': `${title} - Preview Project`,
                 'value': 1
             });
         } else {
