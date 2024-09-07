@@ -7,13 +7,13 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
     const handleImageLoad = () => {
         setImageLoaded(true);
     };
-
     const handleGitHubClick = () => {
         if (typeof gtag === 'function') {
-            gtag('event', 'click', {
-                'event_category': 'Project',
-                'event_label': `${title} - GitHub`,
-                'value': 1
+            gtag('event', 'github_click', {
+                event_category: 'Project',
+                event_label: title,
+                action_type: 'GitHub',
+                value: 1
             });
         } else {
             console.warn('Google Analytics is not loaded yet.');
@@ -22,10 +22,11 @@ const CardProject = ({ projectData: { link, img, title, description, tags, techn
 
     const handlePreviewClick = () => {
         if (typeof gtag === 'function') {
-            gtag('event', 'click', {
-                'event_category': 'Project',
-                'event_label': `${title} - Preview Project`,
-                'value': 1
+            gtag('event', 'preview_click', {
+                event_category: 'Project',
+                event_label: title,
+                action_type: 'Preview Project',
+                value: 1
             });
         } else {
             console.warn('Google Analytics is not loaded yet.');
